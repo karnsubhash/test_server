@@ -1,0 +1,11 @@
+# dependencies
+/node_modules
+/build
+
+# misc
+package-lock.json
+telecom_nms_ui
+configuration.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
