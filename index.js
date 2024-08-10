@@ -13,7 +13,7 @@ const cors = require("cors");
 
 //DECLARATION USER DEFINED FUNCTIONS
 
-const HOSTING_PORT = process.env.SELF_PORT || 8006;
+const HOSTING_PORT = process.env.SELF_PORT || 8017;
 let MAP_DATA = [];
 let THEME_SETTING_DATA = {};
 
