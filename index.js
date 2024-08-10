@@ -46,6 +46,18 @@ const createStorage = (filename) => {
     },
   });
 };
+
+const createGeographyImagesStorage = (filename) => {
+  return multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, "geographyImages");
+    },
+    filename: (req, file, cb) => {
+      cb(null, filename + path.extname(file.originalname));
+    },
+  });
+};
+
 const createDeviceImageStorage = (filename) => {
   console.log("createDeviceImageStorage imageName", filename);
   return multer.diskStorage({
@@ -65,6 +77,11 @@ const uploadDeviceImage = (imageName) => {
     limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
   }).single("file");
 };
+
+const uploadGeographyImages = multer({
+  storage: createGeographyImagesStorage("Datenow"),
+  limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
+}).single("file");
 
 const uploadEmptyImage = multer({
   storage: createStorage("empty"),
@@ -171,6 +188,14 @@ app.use(
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/themeAssets", express.static(path.join(__dirname, "themeAssets")));
+app.use(
+  "/geographyImages",
+  express.static(path.join(__dirname, "geographyImages"))
+);
+app.use(
+  "/geographyImages",
+  express.static(path.join(__dirname, "geographyImages"))
+);
 app.use("/Output", express.static(path.join(__dirname, "Output")));
 app.use("/", express.static(path.join(__dirname, "build")));
 //---------------------------------VAPT CODE START 2---------------------------//
@@ -210,6 +235,16 @@ app.get("/getThemeSettingFromBackend", (req, res) => {
     }
   });
 });
+
+app.post("/uploadGeographyImagesToBackend", (req, res) => {
+  uploadGeographyImages(req, res, (err) => {
+    if (err) {
+      return res.status(400).send({ message: err.message });
+    }
+    res.send({ message: "File uploaded successfully" });
+  });
+});
+
 app.post("/uploadImageToBackend/:id", (req, res) => {
   const { id } = req.params;
   switch (parseInt(id)) {

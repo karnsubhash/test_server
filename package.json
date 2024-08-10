@@ -30,6 +30,7 @@
       "build/**/*",
       "node_modules/**/*",
       "themeAssets/**/*",
+      "geographyImages/**/*",
       "images/device/**/*"
     ],
     "targets": [
