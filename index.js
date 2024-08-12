@@ -16,6 +16,7 @@ const cors = require("cors");
 const HOSTING_PORT = process.env.SELF_PORT || 8017;
 let MAP_DATA = [];
 let THEME_SETTING_DATA = {};
+let GEOGRAPHY_JSON_DATA = {};
 
 const SELF_IP = process.env.SELF_IP || "localhost";
 const allowedOrigins = [
@@ -33,9 +34,9 @@ const allowedOrigins = [
 // ];
 
 //MAIN CODE FLOW
-//console.log("CIKMS SERVER VERSION 1.0.0 ");
-console.log("WVM (UI) IP ", SELF_IP);
-console.log("WVM (UI) PORT ", HOSTING_PORT);
+////console.log("CIKMS SERVER VERSION 1.0.0 ");
+//console.log("WVM (UI) IP ", SELF_IP);
+//console.log("WVM (UI) PORT ", HOSTING_PORT);
 const createStorage = (filename) => {
   return multer.diskStorage({
     destination: (req, file, cb) => {
@@ -47,19 +48,19 @@ const createStorage = (filename) => {
   });
 };
 
-const createGeographyImagesStorage = (filename) => {
+const createGeographyImagesStorage = () => {
   return multer.diskStorage({
     destination: (req, file, cb) => {
       cb(null, "geographyImages");
     },
     filename: (req, file, cb) => {
-      cb(null, filename + path.extname(file.originalname));
+      cb(null, file.originalname);
     },
   });
 };
 
 const createDeviceImageStorage = (filename) => {
-  console.log("createDeviceImageStorage imageName", filename);
+  //console.log("createDeviceImageStorage imageName", filename);
   return multer.diskStorage({
     destination: (req, file, cb) => {
       cb(null, "images/device");
@@ -71,7 +72,7 @@ const createDeviceImageStorage = (filename) => {
 };
 // Function to handle file upload
 const uploadDeviceImage = (imageName) => {
-  console.log("uploadDeviceImage imageName", imageName);
+  //console.log("uploadDeviceImage imageName", imageName);
   return multer({
     storage: createDeviceImageStorage(imageName),
     limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
@@ -79,7 +80,7 @@ const uploadDeviceImage = (imageName) => {
 };
 
 const uploadGeographyImages = multer({
-  storage: createGeographyImagesStorage("Datenow"),
+  storage: createGeographyImagesStorage(),
   limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
 }).single("file");
 
@@ -170,11 +171,11 @@ app.use((_, res, next) => {
   res.set("X-Content-Type-Options", "nosniff");
   next();
 });
-console.log("app.use(cors) allowedOrigins   is", allowedOrigins);
+//console.log("app.use(cors) allowedOrigins   is", allowedOrigins);
 app.use(
   cors({
     origin: function (origin, callback) {
-      // console.log("origin is", origin);
+      // //console.log("origin is", origin);
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
@@ -227,22 +228,39 @@ app.get("/getThemeSettingFromBackend", (req, res) => {
     if (err) {
       res.status(501).send(err);
     } else {
-      // console.log("Sending Data to Client", JSON.parse(data));
+      // //console.log("Sending Data to Client", JSON.parse(data));
       res.status(200).send(JSON.parse(data));
 
-      console.log("themeSetting.json -> ", JSON.parse(data));
+      //console.log("themeSetting.json -> ", JSON.parse(data));
       THEME_SETTING_DATA = JSON.parse(data);
     }
   });
 });
 
-app.post("/uploadGeographyImagesToBackend", (req, res) => {
-  uploadGeographyImages(req, res, (err) => {
+app.get("/getgeoGraphyJsonFromBackend", (req, res) => {
+  fs.readFile("./geography.json", (err, data) => {
+    if (err) {
+      res.status(501).send(err);
+    } else {
+      console.log("Sending Data to Client", JSON.parse(data));
+      res.status(200).send(JSON.parse(data));
+
+      //console.log("geography.json -> ", JSON.parse(data));
+      GEOGRAPHY_JSON_DATA = JSON.parse(data);
+    }
+  });
+});
+
+app.post("/uploadGeographyImagesToBackend", async (req, res) => {
+  //console.log("req, res", req.body);
+
+  await uploadGeographyImages(req, res, (err) => {
     if (err) {
       return res.status(400).send({ message: err.message });
     }
     res.send({ message: "File uploaded successfully" });
   });
+  //console.log("req, res, after", req);
 });
 
 app.post("/uploadImageToBackend/:id", (req, res) => {
@@ -368,7 +386,7 @@ app.post("/uploadImageToBackend/:id", (req, res) => {
 
 app.post("/uploadDeviceImageToBackend/:imageName", (req, res) => {
   const { imageName } = req.params;
-  console.log("/uploadDeviceImageToBackend imageName", imageName);
+  //console.log("/uploadDeviceImageToBackend imageName", imageName);
   const upload = uploadDeviceImage(imageName);
   upload(req, res, (err) => {
     if (err) {
@@ -379,19 +397,19 @@ app.post("/uploadDeviceImageToBackend/:imageName", (req, res) => {
 });
 app.post("/postThemeSettingToBackend", (req, res) => {
   const themeData = req.body;
-  console.log("/postThemeSettingToBackend ->CURRENT ->  themeData ", themeData);
-  console.log(
-    "/postThemeSettingToBackend ->ORIGINAL -> THEME_SETTING_DATA ",
-    THEME_SETTING_DATA
-  );
+  //console.log("/postThemeSettingToBackend ->CURRENT ->  themeData ", themeData);
+  //console.log(
+  //   "/postThemeSettingToBackend ->ORIGINAL -> THEME_SETTING_DATA ",
+  //   THEME_SETTING_DATA
+  // );
 
   const jsonString = JSON.stringify(themeData);
   fs.writeFile("./themeSetting.json", jsonString, (err) => {
     if (err) {
-      console.log("Error writing file", err);
+      //console.log("Error writing file", err);
       res.status(501).send(err);
     } else {
-      console.log("Successfully wrote file");
+      //console.log("Successfully wrote file");
       THEME_SETTING_DATA = themeData;
       res.status(200).send(THEME_SETTING_DATA);
     }
@@ -407,11 +425,11 @@ app.get("/getSysConfig", (req, res) => {
     if (err) {
       res.status(501).send(err);
     } else {
-      // console.log("Sending Data to Client", JSON.parse(data));
+      // //console.log("Sending Data to Client", JSON.parse(data));
       res.status(200).send(JSON.parse(data));
 
-      console.log("WCM (Middleware) IP ", JSON.parse(data).WCM_IP);
-      console.log("WCM (Middleware) PORT ", JSON.parse(data).WCM_PORT);
+      //console.log("WCM (Middleware) IP ", JSON.parse(data).WCM_IP);
+      //console.log("WCM (Middleware) PORT ", JSON.parse(data).WCM_PORT);
     }
   });
 
@@ -424,7 +442,7 @@ app.get("/getSysConfig", (req, res) => {
   //     if (err) {
   //       res.status(501).send(err);
   //     } else {
-  //       // console.log("Sending Data to Client", JSON.parse(data));
+  //       // //console.log("Sending Data to Client", JSON.parse(data));
   //       res.status(200).send(JSON.parse(data));
   //     }
   //   }
@@ -472,7 +490,7 @@ app.get("/getMapJson/:id", (req, res) => {
       res.status(501).send(err);
     } else {
       MAP_DATA = JSON.parse(data);
-      //console.log("Sending Data to Client", MAP_DATA);
+      ////console.log("Sending Data to Client", MAP_DATA);
 
       res.status(200).send(MAP_DATA);
     }
@@ -492,7 +510,7 @@ const isValidColorName = (color) => {
 
 // Utility function to read and modify the SVG file content
 // const modifySvgColor = (filePath, color) => {
-//   console.log("modifySvgColor color", color);
+//   //console.log("modifySvgColor color", color);
 //   const svgContent = fs.readFileSync(filePath, "utf8");
 //   return svgContent.replace(/fill="[^"]*"/g, `fill="${color}"`);
 // };
@@ -508,14 +526,14 @@ const modifySvgColor = (filePath, color) => {
 };
 
 app.get("/images/device/:imageFileName", (req, res) => {
-  console.log("req.query.color", req.query.color);
+  //console.log("req.query.color", req.query.color);
   const actualColor = req.query.color.split("?")[0];
-  console.log("actualColor", actualColor);
+  //console.log("actualColor", actualColor);
   const color = actualColor.toUpperCase() || "gray"; // Default color is gray
-  console.log("finalColor", color);
+  //console.log("finalColor", color);
   const { imageFileName } = req.params;
   const svgPath = path.join(__dirname, "/images/device/" + imageFileName);
-  console.log("svgPath", svgPath);
+  //console.log("svgPath", svgPath);
   const modifiedSvg = modifySvgColor(svgPath, color);
   res.setHeader("Content-Type", "image/svg+xml");
   res.send(modifiedSvg);
@@ -527,7 +545,7 @@ app.get("/images/device/:imageFileName", (req, res) => {
 //       res.status(501).send(err);
 //     } else {
 //       MAP_DATA = JSON.parse(data);
-//       //console.log("Sending Data to Client", MAP_DATA);
+//       ////console.log("Sending Data to Client", MAP_DATA);
 
 //       res.status(200).send(MAP_DATA);
 //     }
@@ -548,7 +566,7 @@ const HostServer = http.createServer(app);
 //);
 
 HostServer.listen(HOSTING_PORT, async () => {
-  console.log(`server running on https port ${HOSTING_PORT}`);
+  //console.log(`server running on https port ${HOSTING_PORT}`);
   //await signalFetchData();
   //await pointFetchData();
 });
