@@ -193,10 +193,10 @@ app.use(
   "/geographyImages",
   express.static(path.join(__dirname, "geographyImages"))
 );
-app.use(
-  "/geographyImages",
-  express.static(path.join(__dirname, "geographyImages"))
-);
+// app.use(
+//   "/geographyImages",
+//   express.static(path.join(__dirname, "geographyImages"))
+// );
 app.use("/Output", express.static(path.join(__dirname, "Output")));
 app.use("/", express.static(path.join(__dirname, "build")));
 //---------------------------------VAPT CODE START 2---------------------------//
@@ -551,6 +551,20 @@ app.get("/images/device/:imageFileName", (req, res) => {
 //     }
 //   });
 // });
+
+app.get("/geographyImages", (req, res) => {
+  //console.log("req.query.color", req.query.color);
+  // const actualColor = req.query.color.split("?")[0];
+  //console.log("actualColor", actualColor);
+  // const color = actualColor.toUpperCase() || "gray"; // Default color is gray
+  //console.log("finalColor", color);
+  const { imageFileName } = req.params;
+  const svgPath = path.join(__dirname, "/images/device/" + imageFileName);
+  //console.log("svgPath", svgPath);
+  const modifiedSvg = modifySvgColor(svgPath, color);
+  res.setHeader("Content-Type", "image/svg+xml");
+  res.send(modifiedSvg);
+});
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
