@@ -256,9 +256,9 @@ app.post("/uploadGeographyImagesToBackend", async (req, res) => {
 
   await uploadGeographyImages(req, res, (err) => {
     if (err) {
-      return res.status(400).send({ message: err.message });
+      // return res.status(400).send({ message: err.message });
     }
-    res.send({ message: "File uploaded successfully" });
+    // res.send({ message: "File uploaded successfully" });
   });
 
   const geographyJsonData = req.body;
