@@ -16,7 +16,13 @@ const cors = require("cors");
 const HOSTING_PORT = process.env.SELF_PORT || 8017;
 let MAP_DATA = [];
 let THEME_SETTING_DATA = {};
-let GEOGRAPHY_JSON_DATA = [];
+let GEOGRAPHY_JSON_DATA = fs.readFile("./geography.json", (err, data) => {
+  if (err) {
+    return [];
+  } else {
+    return JSON.parse(data);
+  }
+});
 
 const SELF_IP = process.env.SELF_IP || "localhost";
 const allowedOrigins = [
