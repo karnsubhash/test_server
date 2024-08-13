@@ -23,6 +23,7 @@ let GEOGRAPHY_JSON_DATA = fs.readFile("./geography.json", (err, data) => {
     return JSON.parse(data);
   }
 });
+let IMPORTANT_POINTS_JSON_DATA = [];
 
 const SELF_IP = process.env.SELF_IP || "localhost";
 const allowedOrigins = [
@@ -253,6 +254,19 @@ app.get("/getgeoGraphyJsonFromBackend", (req, res) => {
 
       //console.log("geography.json -> ", JSON.parse(data));
       GEOGRAPHY_JSON_DATA = JSON.parse(data);
+    }
+  });
+});
+app.get("/getImportantPointsjson", (req, res) => {
+  fs.readFile("./importantPoints.json", (err, data) => {
+    if (err) {
+      res.status(501).send(err);
+    } else {
+      console.log("Sending Data to Client", JSON.parse(data));
+      res.status(200).send(JSON.parse(data));
+
+      //console.log("geography.json -> ", JSON.parse(data));
+      IMPORTANT_POINTS_JSON_DATA = JSON.parse(data);
     }
   });
 });
