@@ -16,7 +16,7 @@ const cors = require("cors");
 const HOSTING_PORT = process.env.SELF_PORT || 8017;
 let MAP_DATA = [];
 let THEME_SETTING_DATA = {};
-let GEOGRAPHY_JSON_DATA = {};
+let GEOGRAPHY_JSON_DATA = [];
 
 const SELF_IP = process.env.SELF_IP || "localhost";
 const allowedOrigins = [
@@ -260,6 +260,31 @@ app.post("/uploadGeographyImagesToBackend", async (req, res) => {
     }
     res.send({ message: "File uploaded successfully" });
   });
+
+  const geographyJsonData = req.body;
+
+  console.log("geographyJsonData", geographyJsonData);
+
+  const data = JSON.parse(geographyJsonData.metaData);
+  const finalData = [
+    ...GEOGRAPHY_JSON_DATA,
+    { fileName: data.fileName, titleName: data.titleName },
+  ];
+
+  const jsonString = JSON.stringify(finalData);
+  fs.writeFile("./geography.json", jsonString, (err) => {
+    try {
+      if (err) {
+        console.log("Error writing file", err);
+        res.status(501).send(err);
+      } else {
+        //console.log("Successfully wrote file");
+        GEOGRAPHY_JSON_DATA = finalData;
+        res.status(200).send(GEOGRAPHY_JSON_DATA);
+      }
+    } catch (e) {}
+  });
+
   //console.log("req, res, after", req);
 });
 
@@ -415,6 +440,29 @@ app.post("/postThemeSettingToBackend", (req, res) => {
     }
   });
 });
+
+// app.post("/postGeographyJsonToBackend", (req, res) => {
+//   const geographyJsonData = req.body;
+//   //console.log("/postThemeSettingToBackend ->CURRENT ->  themeData ", themeData);
+//   //console.log(
+//   //   "/postThemeSettingToBackend ->ORIGINAL -> THEME_SETTING_DATA ",
+//   //   THEME_SETTING_DATA
+//   // );
+
+//   const index = [...GEOGRAPHY_JSON_DATA, { fileName: "", titleName: " " }];
+
+//   const jsonString = JSON.stringify(geographyJsonData);
+//   fs.writeFile("./geography.json", jsonString, (err) => {
+//     if (err) {
+//       //console.log("Error writing file", err);
+//       res.status(501).send(err);
+//     } else {
+//       //console.log("Successfully wrote file");
+//       GEOGRAPHY_JSON_DATA = geographyJsonData;
+//       res.status(200).send(GEOGRAPHY_JSON_DATA);
+//     }
+//   });
+// });
 
 app.get("/getFontFamilyForThemeSetting", (req, res) => {
   res.status(200).send({ data: [{ value: "Lexend", label: "Lexend" }] });
