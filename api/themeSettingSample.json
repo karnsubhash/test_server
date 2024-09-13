@@ -1,0 +1,36 @@
+{
+  "lightMode": {
+    "colorPrimary": "#8e43e7",
+    "colorSuccess": "#8e43e7",
+    "wireframe": false,
+    "fontFamily": "Lexend"
+  },
+  "darkMode": {
+    "colorPrimary": "#c29af2",
+    "colorSuccess": "#c29af2",
+    "wireframe": false,
+    "colorText": "#ffffff",
+    "fontFamily": "Lexend"
+  },
+  "loginBackgroundImage": "loginBackground.png",
+  "loginLogo": "loginLogo.png",
+  "loginCarousalImages": [
+    "lc1.png",
+    "lc2.png",
+    "lc3.png",
+    "lc4.png",
+    "lc5.png",
+    "lc6.png",
+    "lc7.png",
+    "lc8.png",
+    "lc9.png"
+  ],
+  "emptyImage": "empty.png",
+  "helpImage": "help.png",
+  "sideBarTopLogo": "sideBarTopLogo.png",
+  "projectTitle": "Telecom NMS",
+  "sideCollapsed": true,
+  "sidebarBackgroundColor": "#353935",
+  "sidebarLogoBackgroundColor": "#28282B",
+  "languageSelector": true
+}

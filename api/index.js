@@ -16,7 +16,13 @@ const cors = require("cors");
 const HOSTING_PORT = process.env.SELF_PORT || 8017;
 let MAP_DATA = [];
 let THEME_SETTING_DATA = {};
-let GEOGRAPHY_JSON_DATA = fs.readFile("./geography.json", (err, data) => {
+const geographyFilePath = path.join(__dirname, "data", "geography.json");
+const importantPointsFilePath = path.join(
+  __dirname,
+  "data",
+  "importantPoints.json"
+);
+let GEOGRAPHY_JSON_DATA = fs.readFile(geographyFilePath, (err, data) => {
   if (err) {
     return [];
   } else {
@@ -31,6 +37,7 @@ const allowedOrigins = [
   "http://" + SELF_IP + ":3017",
   "http://localhost:" + HOSTING_PORT,
   "http://localhost:3017",
+  "https://test-ui-sand.vercel.app",
 ];
 
 // const allowedOrigins = [
@@ -245,7 +252,7 @@ app.get("/getThemeSettingFromBackend", (req, res) => {
 });
 
 app.get("/getgeoGraphyJsonFromBackend", (req, res) => {
-  fs.readFile("./geography.json", (err, data) => {
+  fs.readFile(geographyFilePath, (err, data) => {
     if (err) {
       res.status(501).send(err);
     } else {
@@ -258,7 +265,7 @@ app.get("/getgeoGraphyJsonFromBackend", (req, res) => {
   });
 });
 app.get("/getImportantPointsjson", (req, res) => {
-  fs.readFile("./importantPoints.json", (err, data) => {
+  fs.readFile(importantPointsFilePath, (err, data) => {
     if (err) {
       res.status(501).send(err);
     } else {
@@ -653,4 +660,4 @@ HostServer.listen(HOSTING_PORT, async () => {
   //await pointFetchData();
 });
 
-module.exports = app
+module.exports = app;
