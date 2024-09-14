@@ -6,7 +6,8 @@
   "bin": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "vercel dev",
+    "start": "vercel dev --listen 8016",
+    "startlocal":"nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "pkg --compress GZip . --o telecom_nms_ui"
   },
