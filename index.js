@@ -61,7 +61,7 @@ const createStorage = (filename) => {
 const createGeographyImagesStorage = () => {
   return multer.diskStorage({
     destination: (req, file, cb) => {
-      cb(null, "geographyImages");
+      cb(null, "api/geographyImages");
     },
     filename: (req, file, cb) => {
       cb(null, file.originalname);
@@ -201,7 +201,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/themeAssets", express.static(path.join(__dirname, "themeAssets")));
 app.use(
   "/api/geographyImages",
-  express.static(path.join(__dirname, "geographyImages"))
+  express.static(path.join(__dirname, "/api/geographyImages"))
 );
 // app.use(
 //   "/geographyImages",
