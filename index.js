@@ -16,13 +16,16 @@ const cors = require("cors");
 const HOSTING_PORT = process.env.SELF_PORT || 8017;
 let MAP_DATA = [];
 let THEME_SETTING_DATA = {};
-let GEOGRAPHY_JSON_DATA = fs.readFile("./geography.json", (err, data) => {
-  if (err) {
-    return [];
-  } else {
-    return JSON.parse(data);
+let GEOGRAPHY_JSON_DATA = fs.readFile(
+  "./api/data/geography.json",
+  (err, data) => {
+    if (err) {
+      return [];
+    } else {
+      return JSON.parse(data);
+    }
   }
-});
+);
 let IMPORTANT_POINTS_JSON_DATA = [];
 
 const SELF_IP = process.env.SELF_IP || "localhost";
@@ -197,7 +200,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/themeAssets", express.static(path.join(__dirname, "themeAssets")));
 app.use(
-  "/geographyImages",
+  "/api/geographyImages",
   express.static(path.join(__dirname, "geographyImages"))
 );
 // app.use(
@@ -230,29 +233,16 @@ app.get("/BitKeeper", (req, res) => {
 });
 
 //---------------------------------VAPT CODE END 2---------------------------//
-app.get("/getThemeSettingFromBackend", (req, res) => {
-  fs.readFile("./themeSetting.json", (err, data) => {
-    if (err) {
-      res.status(501).send(err);
-    } else {
-      // //console.log("Sending Data to Client", JSON.parse(data));
-      res.status(200).send(JSON.parse(data));
-
-      //console.log("themeSetting.json -> ", JSON.parse(data));
-      THEME_SETTING_DATA = JSON.parse(data);
-    }
-  });
-});
 
 app.get("/getgeoGraphyJsonFromBackend", (req, res) => {
-  fs.readFile("./geography.json", (err, data) => {
+  fs.readFile("./api/data/geography.json", (err, data) => {
     if (err) {
       res.status(501).send(err);
     } else {
-      console.log("Sending Data to Client", JSON.parse(data));
+      // console.log("Sending Data to Client", JSON.parse(data));
       res.status(200).send(JSON.parse(data));
 
-      //console.log("geography.json -> ", JSON.parse(data));
+      // console.log("geography.json -> ", JSON.parse(data));
       GEOGRAPHY_JSON_DATA = JSON.parse(data);
     }
   });
@@ -262,7 +252,7 @@ app.get("/getImportantPointsjson", (req, res) => {
     if (err) {
       res.status(501).send(err);
     } else {
-      console.log("Sending Data to Client", JSON.parse(data));
+      // console.log("Sending Data to Client", JSON.parse(data));
       res.status(200).send(JSON.parse(data));
 
       //console.log("geography.json -> ", JSON.parse(data));
@@ -283,7 +273,7 @@ app.post("/uploadGeographyImagesToBackend", async (req, res) => {
 
   const geographyJsonData = req.body;
 
-  console.log("geographyJsonData", geographyJsonData);
+  // console.log("geographyJsonData", geographyJsonData);
 
   const data = JSON.parse(geographyJsonData.metaData);
   const finalData = [
@@ -292,7 +282,7 @@ app.post("/uploadGeographyImagesToBackend", async (req, res) => {
   ];
 
   const jsonString = JSON.stringify(finalData);
-  fs.writeFile("./geography.json", jsonString, (err) => {
+  fs.writeFile("./api/data/geography.json", jsonString, (err) => {
     try {
       if (err) {
         console.log("Error writing file", err);
@@ -621,13 +611,13 @@ app.get("/images/device/:imageFileName", (req, res) => {
 // });
 
 app.get("/geographyImages", (req, res) => {
-  //console.log("req.query.color", req.query.color);
   // const actualColor = req.query.color.split("?")[0];
   //console.log("actualColor", actualColor);
   // const color = actualColor.toUpperCase() || "gray"; // Default color is gray
   //console.log("finalColor", color);
   const { imageFileName } = req.params;
-  const svgPath = path.join(__dirname, "/images/device/" + imageFileName);
+  console.log("imageFileName", imageFileName);
+  const svgPath = path.join(__dirname, "/api/images/device/" + imageFileName);
   //console.log("svgPath", svgPath);
   const modifiedSvg = modifySvgColor(svgPath, color);
   res.setHeader("Content-Type", "image/svg+xml");
@@ -653,4 +643,4 @@ HostServer.listen(HOSTING_PORT, async () => {
   //await pointFetchData();
 });
 
-module.exports = app
+module.exports = app;
