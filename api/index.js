@@ -141,7 +141,7 @@ app.get("/getgeoGraphyJsonFromBackend", (req, res) => {
 });
 
 app.get("/getCurrentAffairsJsonFromBackend", (req, res) => {
-  fs.readFile(geographyFilePath, (err, data) => {
+  fs.readFile(currentAffairsFilePath, (err, data) => {
     if (err) {
       res.status(501).send(err);
     } else {
