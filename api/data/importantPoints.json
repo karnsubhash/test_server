@@ -84,11 +84,28 @@
     "hiddenTags": ["Center - State Relation"],
     "dataList": []
   },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
+  { "title": "US-China-Pakistan Axis", "linkedTopics": ["IR"], "dataList": [] },
+  { "title": "De-Hyphenation Policy", "linkedTopics": ["IR"], "dataList": [] },
+  { "title": "Use of Hard Power", "linkedTopics": ["IR"], "dataList": [] },
+  {
+    "title": "Parliamentary Decline",
+    "linkedTopics": ["Governance"],
+    "dataList": [
+      {
+        "title": "Meets less frequently",
+        "description": "[BOLD]1950s- 120 days[BOLD] to [BOLD]2021 - 58 days[BOLD]"
+      },
+      {
+        "title": "Walkouts and Adjournments",
+        "description": " Monsoon Session of [BOLD]2021 - 22% LS, 28% RS[BOLD]"
+      }
+    ]
+  },
+  {
+    "title": "Hyper-Partisanship",
+    "linkedTopics": ["Governance"],
+    "dataList": []
+  },
   { "title": "Alienation", "linkedTopics": [], "dataList": [] },
   { "title": "Alienation", "linkedTopics": [], "dataList": [] },
   { "title": "Alienation", "linkedTopics": [], "dataList": [] },
