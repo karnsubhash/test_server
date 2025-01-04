@@ -50,8 +50,13 @@
   },
   {
     "title": "Transparency",
-    "linkedTopics": [],
-    "dataList": []
+    "linkedTopics": ["Governance"],
+    "dataList": [
+      {
+        "title": "CAG to collect and manage data securely",
+        "description": " Open Data Kit (ODK) Platform"
+      }
+    ]
   },
   {
     "title": "Corruption",
