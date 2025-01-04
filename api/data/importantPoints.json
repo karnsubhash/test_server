@@ -10,6 +10,11 @@
     "dataList": []
   },
   {
+    "title": "Farmer Empowerment",
+    "linkedTopics": ["Agriculture", "GM Crops"],
+    "dataList": []
+  },
+  {
     "title": "Financial Inclusion",
     "linkedTopics": [],
     "dataList": []
@@ -189,7 +194,7 @@
     "dataList": []
   },
   {
-    "title": "Climate Change",
+    "title": "Climate Change (Resilience)",
     "linkedTopics": [],
     "dataList": []
   },
@@ -269,7 +274,7 @@
     "dataList": []
   },
   {
-    "title": "Regulatory Framework",
+    "title": "Robust Regulatory Framework",
     "linkedTopics": [],
     "dataList": []
   },
@@ -367,18 +372,18 @@
     "dataList": []
   },
   {
-    "title": "Alienation",
+    "title": "Public Awareness & Engagement",
     "linkedTopics": [],
     "dataList": []
   },
   {
-    "title": "Alienation",
-    "linkedTopics": [],
+    "title": "Sustainable Agriculture",
+    "linkedTopics": ["Agriculture", "GM Crops"],
     "dataList": []
   },
   {
-    "title": "Alienation",
-    "linkedTopics": [],
+    "title": "Improved Nutritional Value",
+    "linkedTopics": ["Agriculture", "GM Crops"],
     "dataList": []
   },
   {
