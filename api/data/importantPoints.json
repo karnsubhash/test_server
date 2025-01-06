@@ -104,6 +104,11 @@
     "dataList": []
   },
   {
+    "title": "Regional Stabilities",
+    "linkedTopics": [],
+    "dataList": ["IR", "Internal Security"]
+  },
+  {
     "title": "Food Security",
     "linkedTopics": [],
     "dataList": []
@@ -115,6 +120,11 @@
   },
   {
     "title": "National Security",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Energy Security",
     "linkedTopics": [],
     "dataList": []
   },
@@ -146,7 +156,20 @@
   {
     "title": "Infrastructure",
     "linkedTopics": [],
-    "dataList": []
+    "dataList": [
+      {
+        "title": "Nepal",
+        "description": "Motihari Amlekhganj Petro pipeline, ICPs"
+      },
+      {
+        "title": "Bangladesh",
+        "description": "Maitree & Bandhan Express"
+      },
+      {
+        "title": "Myanmar",
+        "description": "MT Trilateral Highway"
+      }
+    ]
   },
   {
     "title": "Agriculture Backwardness",
@@ -239,7 +262,7 @@
     "dataList": []
   },
   {
-    "title": "Economic Properties",
+    "title": "Economic Prosperities",
     "linkedTopics": [],
     "dataList": []
   },
@@ -392,37 +415,72 @@
     "dataList": []
   },
   {
-    "title": "Alienation",
-    "linkedTopics": [],
+    "title": "Power Asymmetry",
+    "linkedTopics": ["IR"],
     "dataList": []
   },
   {
-    "title": "Alienation",
-    "linkedTopics": [],
+    "title": "People to People Connectivity",
+    "linkedTopics": ["IR"],
     "dataList": []
   },
   {
-    "title": "Alienation",
-    "linkedTopics": [],
+    "title": "Economic Integration",
+    "linkedTopics": ["IR"],
     "dataList": []
   },
   {
-    "title": "Alienation",
-    "linkedTopics": [],
+    "title": "Economic Assistance",
+    "linkedTopics": ["IR"],
+    "dataList": [
+      {
+        "title": "Maldives",
+        "description": "Greater Male Connectivity Project, Covid-19 vaccines"
+      },
+      {
+        "title": "Sri Lanka",
+        "description": "Housing projects, Emergency relief in disasters"
+      }
+    ]
+  },
+  {
+    "title": "Energy Cooperation",
+    "linkedTopics": ["IR"],
+    "dataList": [
+      {
+        "title": "Nepal",
+        "description": "Power Exchange Agreement, Hydropower Projects - Arun III, Upper Karnali"
+      },
+      {
+        "title": "Bhutan",
+        "description": "Long Term Power Purchase Agreements, Hydro Projects - Tala, Chukha"
+      },
+      {
+        "title": "Bangladesh",
+        "description": "Bheramara Behrampur Transmission Line"
+      },
+      {
+        "title": "Myanmar",
+        "description": "Tamanthi Dam Project"
+      },
+      {
+        "title": "Sri Lanka",
+        "description": "Trincomalee oil terminal, Solar & Wind projects"
+      }
+    ]
+  },
+  {
+    "title": "Security Cooperation",
+    "linkedTopics": ["IR"],
     "dataList": []
   },
   {
-    "title": "Alienation",
-    "linkedTopics": [],
-    "dataList": []
+    "title": "Humanitarian Assistance",
+    "linkedTopics": ["IR"],
+    "dataList": [{ "title": "Maldives", "desciption": "Operation Sanjeevani" }]
   },
   {
-    "title": "Alienation",
-    "linkedTopics": [],
-    "dataList": []
-  },
-  {
-    "title": "Alienation",
+    "title": "Big - Brotherly Approach",
     "linkedTopics": [],
     "dataList": []
   },
