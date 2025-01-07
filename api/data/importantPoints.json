@@ -490,6 +490,16 @@
     "dataList": ["Governance"]
   },
   {
+    "title": "Caste Disrimination",
+    "linkedTopics": ["Social Justice"],
+    "dataList": [
+      {
+        "title": "Thorat Committee (2007)",
+        "description": "Around 72% of SC and ST students - discrimination experienced in classroom"
+      }
+    ]
+  },
+  {
     "title": "Alienation",
     "linkedTopics": [],
     "dataList": []
