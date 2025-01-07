@@ -7,12 +7,25 @@
   {
     "title": "Women Empowerment",
     "linkedTopics": [],
-    "dataList": []
+    "dataList": [
+      { "title": "Lakhpati Didi Programme", "description": "3 cr target" },
+      { "title": "Drone Didi Programme", "description": "" },
+      { "title": "Mudra Yojana", "description": "Collateral free loans" }
+    ]
   },
   {
     "title": "Farmer Empowerment",
     "linkedTopics": ["Agriculture", "GM Crops"],
-    "dataList": []
+    "dataList": [
+      {
+        "title": "PM Kisan Samman Nidh",
+        "description": "Financial assistance to farmers"
+      },
+      {
+        "title": "PM Crop Insurance Scheme",
+        "description": "Risk coverage for farmers"
+      }
+    ]
   },
   {
     "title": "Financial Inclusion",
@@ -96,7 +109,22 @@
   {
     "title": "Environmental Issues",
     "linkedTopics": [],
-    "dataList": []
+    "dataList": [
+      {
+        "title": "Great Nicobar Project",
+        "description": "Deforestation, Threat to species"
+      }
+    ]
+  },
+  {
+    "title": "Environmental Sustainability",
+    "linkedTopics": [],
+    "dataList": [
+      {
+        "title": "Amrit Sarovar Campaign",
+        "description": "Community care for village reserviors"
+      }
+    ]
   },
   {
     "title": "Regional Disparities",
@@ -498,6 +526,26 @@
         "description": "Around 72% of SC and ST students - discrimination experienced in classroom"
       }
     ]
+  },
+  {
+    "title": "Role of Civil Society",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Role of Media",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Fragmented Governance",
+    "linkedTopics": ["Governance"],
+    "dataList": []
+  },
+  {
+    "title": "Preventive Healthcare",
+    "linkedTopics": ["GS 3"],
+    "dataList": [{ "title": "Eat Right India", "description": "" }]
   },
   {
     "title": "Alienation",
