@@ -105,8 +105,8 @@
   },
   {
     "title": "Regional Stabilities",
-    "linkedTopics": [],
-    "dataList": ["IR", "Internal Security"]
+    "linkedTopics": ["IR", "Internal Security"],
+    "dataList": []
   },
   {
     "title": "Food Security",
@@ -178,11 +178,6 @@
   },
   {
     "title": "Underdevelopment",
-    "linkedTopics": [],
-    "dataList": []
-  },
-  {
-    "title": "Alienation",
     "linkedTopics": [],
     "dataList": []
   },
@@ -477,12 +472,22 @@
   {
     "title": "Humanitarian Assistance",
     "linkedTopics": ["IR"],
-    "dataList": [{ "title": "Maldives", "desciption": "Operation Sanjeevani" }]
+    "dataList": [{ "title": "Maldives", "description": "Operation Sanjeevani" }]
   },
   {
     "title": "Big - Brotherly Approach",
     "linkedTopics": [],
     "dataList": []
+  },
+  {
+    "title": "Risk to Sovereignty",
+    "linkedTopics": ["Internal Security", "Cyber Security (S&T)", "Governance"],
+    "dataList": []
+  },
+  {
+    "title": "Maintain Public Order",
+    "linkedTopics": [],
+    "dataList": ["Governance"]
   },
   {
     "title": "Alienation",
