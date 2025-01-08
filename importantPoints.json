@@ -4,10 +4,44 @@
     "linkedTopics": ["Social Security", "Social Justice"],
     "dataList": []
   },
-  { "title": "Women Empowerment", "linkedTopics": [], "dataList": [] },
-  { "title": "Financial Inclusion", "linkedTopics": [], "dataList": [] },
-  { "title": "Poverty", "linkedTopics": [], "dataList": [] },
-  { "title": "Migration", "linkedTopics": [], "dataList": [] },
+  {
+    "title": "Women Empowerment",
+    "linkedTopics": [],
+    "dataList": [
+      { "title": "Lakhpati Didi Programme", "description": "3 cr target" },
+      { "title": "Drone Didi Programme", "description": "" },
+      { "title": "Mudra Yojana", "description": "Collateral free loans" }
+    ]
+  },
+  {
+    "title": "Farmer Empowerment",
+    "linkedTopics": ["Agriculture", "GM Crops"],
+    "dataList": [
+      {
+        "title": "PM Kisan Samman Nidh",
+        "description": "Financial assistance to farmers"
+      },
+      {
+        "title": "PM Crop Insurance Scheme",
+        "description": "Risk coverage for farmers"
+      }
+    ]
+  },
+  {
+    "title": "Financial Inclusion",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Poverty",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Migration",
+    "linkedTopics": [],
+    "dataList": []
+  },
   {
     "title": "Equal Pay for Equal Work",
     "linkedTopics": [],
@@ -22,82 +56,510 @@
       }
     ]
   },
-  { "title": "Good Governance", "linkedTopics": [], "dataList": [] },
-  { "title": "Transparency", "linkedTopics": [], "dataList": [] },
-  { "title": "Corruption", "linkedTopics": [], "dataList": [] },
-  { "title": "Identify Beneficiary", "linkedTopics": [], "dataList": [] },
-  { "title": "Skill Development", "linkedTopics": [], "dataList": [] },
-  { "title": "Literacy", "linkedTopics": [], "dataList": [] },
-  { "title": "Social Exclusion", "linkedTopics": [], "dataList": [] },
-  { "title": "Social Security", "linkedTopics": [], "dataList": [] },
-  { "title": "Wealth Inequality", "linkedTopics": [], "dataList": [] },
-  { "title": "Environmental Issues", "linkedTopics": [], "dataList": [] },
-  { "title": "Regional Disparities", "linkedTopics": [], "dataList": [] },
-  { "title": "Food Security", "linkedTopics": [], "dataList": [] },
-  { "title": "Undernourishment", "linkedTopics": [], "dataList": [] },
-  { "title": "National Security", "linkedTopics": [], "dataList": [] },
-  { "title": "Self Reliance", "linkedTopics": [], "dataList": [] },
-  { "title": "Accountability", "linkedTopics": [], "dataList": [] },
-  { "title": "Red Tapism", "linkedTopics": [], "dataList": [] },
-  { "title": "Inefficiency", "linkedTopics": [], "dataList": [] },
-  { "title": "Political Stability", "linkedTopics": [], "dataList": [] },
-  { "title": "Infrastructure", "linkedTopics": [], "dataList": [] },
-  { "title": "Agriculture Backwardness", "linkedTopics": [], "dataList": [] },
-  { "title": "Underdevelopment", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Unity and Harmony", "linkedTopics": [], "dataList": [] },
-  { "title": "Equatable Distribution", "linkedTopics": [], "dataList": [] },
-  { "title": "Resource Utilization", "linkedTopics": [], "dataList": [] },
-  { "title": "Waste Reduction", "linkedTopics": [], "dataList": [] },
-  { "title": "Reduce Vulnerability", "linkedTopics": [], "dataList": [] },
-  { "title": "Pollution", "linkedTopics": [], "dataList": [] },
-  { "title": "Global Warming", "linkedTopics": [], "dataList": [] },
-  { "title": "Climate Change", "linkedTopics": [], "dataList": [] },
-  { "title": "Increasing Discontent", "linkedTopics": [], "dataList": [] },
-  { "title": "Timely Justice", "linkedTopics": [], "dataList": [] },
-  { "title": "People Centred Policies", "linkedTopics": [], "dataList": [] },
-  { "title": "Geopoloitical Complexities", "linkedTopics": [], "dataList": [] },
-  { "title": "Egalitarian", "linkedTopics": [], "dataList": [] },
-  { "title": "Hamper Federalism", "linkedTopics": [], "dataList": [] },
-  { "title": "Horse Trading", "linkedTopics": [], "dataList": [] },
-  { "title": "Economic Properties", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Technological Advancement", "linkedTopics": [], "dataList": [] },
-  { "title": "Specialised Experts", "linkedTopics": [], "dataList": [] },
-  { "title": "Enhanced Scruitny", "linkedTopics": [], "dataList": [] },
-  { "title": "Unclear Definition", "linkedTopics": [], "dataList": [] },
-  { "title": "Judicial Review", "linkedTopics": [], "dataList": [] },
-  { "title": "Unstable Income", "linkedTopics": [], "dataList": [] },
-  { "title": "Regulatory Framework", "linkedTopics": [], "dataList": [] },
-  { "title": "Demographic Shift", "linkedTopics": [], "dataList": [] },
-  { "title": "Budget Constraints", "linkedTopics": [], "dataList": [] },
-  { "title": "Global Economic Crisis", "linkedTopics": [], "dataList": [] },
-  { "title": "Administrative Challenges", "linkedTopics": [], "dataList": [] },
-  { "title": "Regional Securities", "linkedTopics": [], "dataList": [] },
-  { "title": "Trade Agreement", "linkedTopics": [], "dataList": [] },
-  { "title": "Unstable Governments", "linkedTopics": [], "dataList": [] },
-  { "title": "Nationl Security", "linkedTopics": [], "dataList": [] },
-  { "title": "Limited Natural Resource", "linkedTopics": [], "dataList": [] },
+  {
+    "title": "Good Governance",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Transparency",
+    "linkedTopics": ["Governance"],
+    "dataList": [
+      {
+        "title": "CAG to collect and manage data securely",
+        "description": " Open Data Kit (ODK) Platform"
+      }
+    ]
+  },
+  {
+    "title": "Corruption",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Identify Beneficiary",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Skill Development",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Literacy",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Social Exclusion",
+    "linkedTopics": ["Naxalism (Internal Security)"],
+    "dataList": []
+  },
+  {
+    "title": "Social Security",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Wealth Inequality",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Environmental Issues",
+    "linkedTopics": [],
+    "dataList": [
+      {
+        "title": "Great Nicobar Project",
+        "description": "Deforestation, Threat to species"
+      }
+    ]
+  },
+  {
+    "title": "Environmental Sustainability",
+    "linkedTopics": [],
+    "dataList": [
+      {
+        "title": "Amrit Sarovar Campaign",
+        "description": "Community care for village reserviors"
+      }
+    ]
+  },
+  {
+    "title": "Regional Disparities",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Regional Stabilities",
+    "linkedTopics": ["IR", "Internal Security"],
+    "dataList": []
+  },
+  {
+    "title": "Food Security",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Undernourishment",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "National Security",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Energy Security",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Self Reliance",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Accountability",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Red Tapism",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Inefficiency",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Political Stability",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Infrastructure",
+    "linkedTopics": [],
+    "dataList": [
+      {
+        "title": "Nepal",
+        "description": "Motihari Amlekhganj Petro pipeline, ICPs"
+      },
+      {
+        "title": "Bangladesh",
+        "description": "Maitree & Bandhan Express"
+      },
+      {
+        "title": "Myanmar",
+        "description": "MT Trilateral Highway"
+      }
+    ]
+  },
+  {
+    "title": "Agriculture Backwardness",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Underdevelopment",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Unity and Harmony",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Equatable Distribution",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Resource Utilization",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Waste Reduction",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Reduce Vulnerability",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Pollution",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Global Warming",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Climate Change (Resilience)",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Increasing Discontent",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Timely Justice",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "People Centred Policies",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Geopoloitical Complexities",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Egalitarian",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Hamper Federalism",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Horse Trading",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Economic Prosperities",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Alienation",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Technological Advancement",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Specialised Experts",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Enhanced Scruitny",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Unclear Definition",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Judicial Review",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Unstable Income",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Robust Regulatory Framework",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Demographic Shift",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Budget Constraints",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Global Economic Crisis",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Administrative Challenges",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Regional Securities",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Trade Agreement",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Unstable Governments",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Nationl Security",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Limited Natural Resource",
+    "linkedTopics": [],
+    "dataList": []
+  },
   {
     "title": "Disinvestment",
     "linkedTopics": ["Federalism", "Budget"],
     "hiddenTags": ["Center - State Relation"],
     "dataList": []
   },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] },
-  { "title": "Alienation", "linkedTopics": [], "dataList": [] }
+  {
+    "title": "US-China-Pakistan Axis",
+    "linkedTopics": ["IR"],
+    "dataList": []
+  },
+  {
+    "title": "De-Hyphenation Policy",
+    "linkedTopics": ["IR"],
+    "dataList": []
+  },
+  {
+    "title": "Use of Hard Power",
+    "linkedTopics": ["IR"],
+    "dataList": []
+  },
+  {
+    "title": "Parliamentary Decline",
+    "linkedTopics": ["Governance"],
+    "dataList": [
+      {
+        "title": "Meets less frequently",
+        "description": "[BOLD]1950s- 120 days[BOLD] to [BOLD]2021 - 58 days[BOLD]"
+      },
+      {
+        "title": "Walkouts and Adjournments",
+        "description": " Monsoon Session of [BOLD]2021 - 22% LS, 28% RS[BOLD]"
+      },
+      {
+        "title": "Report by NCRWC",
+        "description": "At least 120 days a year parliament should sit"
+      },
+      {
+        "title": "Underutilised DRSCs",
+        "description": "LS; 25% - 16th LS"
+      }
+    ]
+  },
+  {
+    "title": "Hyper-Partisanship",
+    "linkedTopics": ["Governance"],
+    "dataList": []
+  },
+  {
+    "title": "Public Awareness & Engagement",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Sustainable Agriculture",
+    "linkedTopics": ["Agriculture", "GM Crops"],
+    "dataList": []
+  },
+  {
+    "title": "Improved Nutritional Value",
+    "linkedTopics": ["Agriculture", "GM Crops"],
+    "dataList": []
+  },
+  {
+    "title": "Power Asymmetry",
+    "linkedTopics": ["IR"],
+    "dataList": []
+  },
+  {
+    "title": "People to People Connectivity",
+    "linkedTopics": ["IR"],
+    "dataList": []
+  },
+  {
+    "title": "Economic Integration",
+    "linkedTopics": ["IR"],
+    "dataList": []
+  },
+  {
+    "title": "Economic Assistance",
+    "linkedTopics": ["IR"],
+    "dataList": [
+      {
+        "title": "Maldives",
+        "description": "Greater Male Connectivity Project, Covid-19 vaccines"
+      },
+      {
+        "title": "Sri Lanka",
+        "description": "Housing projects, Emergency relief in disasters"
+      }
+    ]
+  },
+  {
+    "title": "Energy Cooperation",
+    "linkedTopics": ["IR"],
+    "dataList": [
+      {
+        "title": "Nepal",
+        "description": "Power Exchange Agreement, Hydropower Projects - Arun III, Upper Karnali"
+      },
+      {
+        "title": "Bhutan",
+        "description": "Long Term Power Purchase Agreements, Hydro Projects - Tala, Chukha"
+      },
+      {
+        "title": "Bangladesh",
+        "description": "Bheramara Behrampur Transmission Line"
+      },
+      {
+        "title": "Myanmar",
+        "description": "Tamanthi Dam Project"
+      },
+      {
+        "title": "Sri Lanka",
+        "description": "Trincomalee oil terminal, Solar & Wind projects"
+      }
+    ]
+  },
+  {
+    "title": "Security Cooperation",
+    "linkedTopics": ["IR"],
+    "dataList": []
+  },
+  {
+    "title": "Humanitarian Assistance",
+    "linkedTopics": ["IR"],
+    "dataList": [{ "title": "Maldives", "description": "Operation Sanjeevani" }]
+  },
+  {
+    "title": "Big - Brotherly Approach",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Risk to Sovereignty",
+    "linkedTopics": ["Internal Security", "Cyber Security (S&T)", "Governance"],
+    "dataList": []
+  },
+  {
+    "title": "Maintain Public Order",
+    "linkedTopics": ["Governance"],
+    "dataList": []
+  },
+  {
+    "title": "Caste Disrimination",
+    "linkedTopics": ["Social Justice"],
+    "dataList": [
+      {
+        "title": "Thorat Committee (2007)",
+        "description": "Around 72% of SC and ST students - discrimination experienced in classroom"
+      }
+    ]
+  },
+  {
+    "title": "Role of Civil Society",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Role of Media",
+    "linkedTopics": [],
+    "dataList": []
+  },
+  {
+    "title": "Fragmented Governance",
+    "linkedTopics": ["Governance"],
+    "dataList": []
+  },
+  {
+    "title": "Preventive Healthcare",
+    "linkedTopics": ["GS 3"],
+    "dataList": [{ "title": "Eat Right India", "description": "" }]
+  },
+  {
+    "title": "Sedentary Lifestyle",
+    "linkedTopics": ["Health (S&T)"],
+    "dataList": []
+  },
+  {
+    "title": "Human Rights Violations",
+    "linkedTopics": [],
+    "dataList": [{ "title": "", "description": "" }]
+  },
+  {
+    "title": "Alienation",
+    "linkedTopics": [],
+    "dataList": [{ "title": "", "description": "" }]
+  }
 ]

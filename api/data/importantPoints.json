@@ -93,7 +93,7 @@
   },
   {
     "title": "Social Exclusion",
-    "linkedTopics": [],
+    "linkedTopics": ["Naxalism (Internal Security)"],
     "dataList": []
   },
   {
@@ -428,6 +428,11 @@
     "dataList": []
   },
   {
+    "title": "Public Participation",
+    "linkedTopics": ["Governance", "Environment"],
+    "dataList": []
+  },
+  {
     "title": "Sustainable Agriculture",
     "linkedTopics": ["Agriculture", "GM Crops"],
     "dataList": []
@@ -514,8 +519,8 @@
   },
   {
     "title": "Maintain Public Order",
-    "linkedTopics": [],
-    "dataList": ["Governance"]
+    "linkedTopics": ["Governance"],
+    "dataList": []
   },
   {
     "title": "Caste Disrimination",
@@ -548,8 +553,23 @@
     "dataList": [{ "title": "Eat Right India", "description": "" }]
   },
   {
-    "title": "Alienation",
+    "title": "Sedentary Lifestyle",
+    "linkedTopics": ["Health (S&T)"],
+    "dataList": []
+  },
+  {
+    "title": "Human Rights Violations",
     "linkedTopics": [],
     "dataList": []
+  },
+  {
+    "title": "Lack of Role Model",
+    "linkedTopics": ["Women Enpowerment (Indian Society)"],
+    "dataList": []
+  },
+  {
+    "title": "Alienation",
+    "linkedTopics": [],
+    "dataList": [{ "title": "", "description": "" }]
   }
 ]
