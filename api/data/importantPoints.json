@@ -14,6 +14,24 @@
     ]
   },
   {
+    "title": "Gender Equality (SDG 5)",
+    "linkedTopics": [],
+    "dataList": [
+      {
+        "title": "Beijing Declaration and Platform for Action (1995)",
+        "description": "Women's Equal Access in Science and Technology"
+      },
+      {
+        "title": "Gender Budgeting",
+        "description": "Started in Budget 2005-06"
+      },
+      {
+        "title": "Women in Engineering, Science, and Technology (WEST)",
+        "description": "To provide an avenue for scientifically inclined women researchers and scientists"
+      }
+    ]
+  },
+  {
     "title": "Farmer Empowerment",
     "linkedTopics": ["Agriculture", "GM Crops"],
     "dataList": [
