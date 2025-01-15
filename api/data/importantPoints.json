@@ -126,8 +126,21 @@
   },
   {
     "title": "Wealth Inequality",
-    "linkedTopics": [],
-    "dataList": []
+    "linkedTopics": ["Inclusive Growth (Economics)"],
+    "dataList": [
+      {
+        "title": "12th FYP",
+        "description": "Faster, sustainable and more inclusive growth"
+      },
+      {
+        "title": "Insurance Penetration",
+        "description": "4.3%"
+      },
+      {
+        "title": "UNCTAD",
+        "description": "Inclusivity across four categories: [BOLD]economy[BOLD], [BOLD]living conditions[BOLD], [BOLD]equality[BOLD], and [BOLD]environment[BOLD]"
+      }
+    ]
   },
   {
     "title": "Environmental Issues",
@@ -589,6 +602,20 @@
     "title": "Lack of Role Model",
     "linkedTopics": ["Women Enpowerment (Indian Society)"],
     "dataList": []
+  },
+  {
+    "title": "Right to Information",
+    "linkedTopics": ["Governance"],
+    "dataList": [
+      {
+        "title": "Shourie Committee, 1997",
+        "description": "Possibility of legislation on freedom of information"
+      },
+      {
+        "title": "State of UP va Raj Narain Case",
+        "description": "Supreme Court ordered to disclose Blue Book"
+      }
+    ]
   },
   {
     "title": "Alienation",
