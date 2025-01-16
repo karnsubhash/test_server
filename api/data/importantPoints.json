@@ -554,6 +554,16 @@
     "dataList": []
   },
   {
+    "title": "Mitigate Cyber Crime",
+    "linkedTopics": ["Internal Security"],
+    "dataList": [
+      {
+        "title": "Cyber Swachhta Kendra",
+        "description": "Detect botnet infections"
+      }
+    ]
+  },
+  {
     "title": "Maintain Public Order",
     "linkedTopics": ["Governance"],
     "dataList": []
@@ -634,6 +644,11 @@
         "description": "Efficiency of Nano urea in [BOLD]85-90%[BOLD] but traditional Urea is [BOLD]25%[BOLD]"
       }
     ]
+  },
+  {
+    "title": "  Circular Economy Model",
+    "linkedTopics": [],
+    "dataList": []
   },
   {
     "title": "Alienation",
