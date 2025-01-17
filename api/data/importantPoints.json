@@ -651,6 +651,21 @@
     "dataList": []
   },
   {
+    "title": "Beggar-thy-neighbour",
+    "linkedTopics": ["IR"],
+    "dataList": []
+  },
+  {
+    "title": "Increase Import Cover",
+    "linkedTopics": ["IR", "BOP (Economics)"],
+    "dataList": []
+  },
+  {
+    "title": "Oligopoly",
+    "linkedTopics": ["Economics"],
+    "dataList": []
+  },
+  {
     "title": "Alienation",
     "linkedTopics": [],
     "dataList": [{ "title": "", "description": "" }]
