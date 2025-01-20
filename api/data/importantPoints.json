@@ -85,7 +85,11 @@
     "dataList": [
       {
         "title": "CAG to collect and manage data securely",
-        "description": " Open Data Kit (ODK) Platform"
+        "description": "Open Data Kit (ODK) Platform"
+      },
+      {
+        "title": "Lokpal",
+        "description": "90% of the complaints rejected as they were not in correct format"
       }
     ]
   },
