@@ -22,6 +22,29 @@ let GEOGRAPHY_JSON_DATA = fs.readFile(
     }
   }
 );
+
+let ANCIENT_HISTORY_JSON_DATA = fs.readFile(
+  "./api/data/ancientHistory.json",
+  (err, data) => {
+    if (err) {
+      return [];
+    } else {
+      return JSON.parse(data);
+    }
+  }
+);
+
+let MEDIEVAL_HISTORY_JSON_DATA = fs.readFile(
+  "./api/data/medievalHistory.json",
+  (err, data) => {
+    if (err) {
+      return [];
+    } else {
+      return JSON.parse(data);
+    }
+  }
+);
+
 let CURRENT_AFFAIRS_JSON_DATA = fs.readFile(
   "./api/data/currentAffairs.json",
   (err, data) => {
@@ -53,6 +76,28 @@ const createGeographyImagesStorage = () => {
   });
 };
 
+const createAncientImagesStorage = () => {
+  return multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, "api/ancientHistoryImages");
+    },
+    filename: (req, file, cb) => {
+      cb(null, file.originalname);
+    },
+  });
+};
+
+const createMedievalImagesStorage = () => {
+  return multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, "api/medievalHistoryImages");
+    },
+    filename: (req, file, cb) => {
+      cb(null, file.originalname);
+    },
+  });
+};
+
 const createCurrentAffairsImagesStorage = () => {
   return multer.diskStorage({
     destination: (req, file, cb) => {
@@ -67,6 +112,16 @@ const createCurrentAffairsImagesStorage = () => {
 //---------------------------------Upload Code---------------------------//
 const uploadGeographyImages = multer({
   storage: createGeographyImagesStorage(),
+  limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
+}).single("file");
+
+const uploadAncientHistoryImages = multer({
+  storage: createAncientImagesStorage(),
+  limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
+}).single("file");
+
+const uploadMedievalHistoryImages = multer({
+  storage: createMedievalImagesStorage(),
   limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
 }).single("file");
 
@@ -106,6 +161,14 @@ app.use("/themeAssets", express.static(path.join(__dirname, "themeAssets")));
 app.use(
   "/api/geographyImages",
   express.static(path.join(__dirname, "/api/geographyImages"))
+);
+app.use(
+  "/api/ancientHistoryImages",
+  express.static(path.join(__dirname, "/api/ancientHistoryImages"))
+);
+app.use(
+  "/api/medievalHistoryImages",
+  express.static(path.join(__dirname, "/api/medievalHistoryImages"))
 );
 app.use(
   "/api/currentAffairsImages",
@@ -148,6 +211,34 @@ app.get("/getgeoGraphyJsonFromBackend", (req, res) => {
 
       // console.log("geography.json -> ", JSON.parse(data));
       GEOGRAPHY_JSON_DATA = JSON.parse(data);
+    }
+  });
+});
+
+app.get("/getAncientHistoryJsonFromBackend", (req, res) => {
+  fs.readFile("./api/data/ancientHistory.json", (err, data) => {
+    if (err) {
+      res.status(501).send(err);
+    } else {
+      // console.log("Sending Data to Client", JSON.parse(data));
+      res.status(200).send(JSON.parse(data));
+
+      // console.log("geography.json -> ", JSON.parse(data));
+      ANCIENT_HISTORY_JSON_DATA = JSON.parse(data);
+    }
+  });
+});
+
+app.get("/getMedievalHistoryJsonFromBackend", (req, res) => {
+  fs.readFile("./api/data/medievalHistory.json", (err, data) => {
+    if (err) {
+      res.status(501).send(err);
+    } else {
+      // console.log("Sending Data to Client", JSON.parse(data));
+      res.status(200).send(JSON.parse(data));
+
+      // console.log("geography.json -> ", JSON.parse(data));
+      MEDIEVAL_HISTORY_JSON_DATA = JSON.parse(data);
     }
   });
 });
@@ -212,6 +303,72 @@ app.post("/uploadGeographyImagesToBackend", async (req, res) => {
         //console.log("Successfully wrote file");
         GEOGRAPHY_JSON_DATA = finalData;
         res.status(200).send(GEOGRAPHY_JSON_DATA);
+      }
+    } catch (e) {}
+  });
+});
+
+app.post("/uploadAncientHistoryImagesToBackend", async (req, res) => {
+  //console.log("req, res", req.body);
+
+  await uploadAncientHistoryImages(req, res, (err) => {
+    if (err) {
+      // return res.status(400).send({ message: err.message });
+    }
+    // res.send({ message: "File uploaded successfully" });
+  });
+
+  const ancientHistoryJsonData = req.body;
+
+  const data = JSON.parse(ancientHistoryJsonData.metaData);
+  const finalData = [
+    ...ANCIENT_HISTORY_JSON_DATA,
+    { fileName: data.fileName, titleName: data.titleName },
+  ];
+
+  const jsonString = JSON.stringify(finalData);
+  fs.writeFile("./api/data/ancientHistory.json", jsonString, (err) => {
+    try {
+      if (err) {
+        console.log("Error writing file", err);
+        res.status(501).send(err);
+      } else {
+        //console.log("Successfully wrote file");
+        ANCIENT_HISTORY_JSON_DATA = finalData;
+        res.status(200).send(ANCIENT_HISTORY_JSON_DATA);
+      }
+    } catch (e) {}
+  });
+});
+
+app.post("/uploadMedievalHistoryImagesToBackend", async (req, res) => {
+  //console.log("req, res", req.body);
+
+  await uploadMedievalHistoryImages(req, res, (err) => {
+    if (err) {
+      // return res.status(400).send({ message: err.message });
+    }
+    // res.send({ message: "File uploaded successfully" });
+  });
+
+  const medievalHistoryJsonData = req.body;
+
+  const data = JSON.parse(medievalHistoryJsonData.metaData);
+  const finalData = [
+    ...MEDIEVAL_HISTORY_JSON_DATA,
+    { fileName: data.fileName, titleName: data.titleName },
+  ];
+
+  const jsonString = JSON.stringify(finalData);
+  fs.writeFile("./api/data/medievalHistory.json", jsonString, (err) => {
+    try {
+      if (err) {
+        console.log("Error writing file", err);
+        res.status(501).send(err);
+      } else {
+        //console.log("Successfully wrote file");
+        MEDIEVAL_HISTORY_JSON_DATA = finalData;
+        res.status(200).send(MEDIEVAL_HISTORY_JSON_DATA);
       }
     } catch (e) {}
   });
