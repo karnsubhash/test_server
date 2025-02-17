@@ -1,19 +1,7 @@
 [
   {
-    "fileName": "Indian_Coastline16d3aaa8-8070-cd88-283d-64486b75ff32.jpg",
-    "titleName": "Indian Coastline"
-  },
-  {
-    "fileName": "Plateau_in_Indiaa1ecf8c2-9807-5d12-6406-49d60022c168.jpg",
-    "titleName": "Plateau in India"
-  },
-  {
     "fileName": "Soils_in India7eb4dc0a-7664-6ce1-b18b-b3561814991b.jpg",
     "titleName": "Soils in India"
-  },
-  {
-    "fileName": "Local_Winds (India)c198fda8-e4dd-4c5e-abe2-2b9e253a5de3.png",
-    "titleName": "Local Winds (India)"
   },
   {
     "fileName": "Forest_In_Indiaa64fd860-4078-7710-599c-b7de94aa7eb4.png",
@@ -24,8 +12,24 @@
     "titleName": "Passes_In_India"
   },
   {
-    "fileName": "Soils_In_India_StateWiseeed5436f-6e2a-4933-fe56-f5ffcc455fde.png",
-    "titleName": "Soils In India State Wise"
+    "fileName": "Local_Winds (India)c198fda8-e4dd-4c5e-abe2-2b9e253a5de3.png",
+    "titleName": "Local Winds (India)"
+  },
+  {
+    "fileName": "Plateau_in_Indiaa1ecf8c2-9807-5d12-6406-49d60022c168.jpg",
+    "titleName": "Plateau in India"
+  },
+  {
+    "fileName": "South_India_Hills1d368af4-c1e9-320d-66a8-de03029d9e46.png",
+    "titleName": "South India Hills"
+  },
+  {
+    "fileName": "Indian_Coastline16d3aaa8-8070-cd88-283d-64486b75ff32.jpg",
+    "titleName": "Indian Coastline"
+  },
+  {
+    "fileName": "Biogeographical_Region0a509c75-88a3-c133-c670-8506c222ef1e.jpg",
+    "titleName": "Biogeographical Region"
   },
   {
     "fileName": "Corals_In_Indiad5495fed-4cf3-39f0-a0ca-90f9bed36b11.png",
@@ -36,16 +40,88 @@
     "titleName": "India Coordinates"
   },
   {
-    "fileName": "South_India_Hills1d368af4-c1e9-320d-66a8-de03029d9e46.png",
-    "titleName": "South India Hills"
-  },
-  {
     "fileName": "Indian_Political2270ae48-28e4-9c80-96e3-b7f8a1acbd30.jpg",
     "titleName": "Indian Political"
   },
   {
+    "fileName": "Soils_In_India_StateWiseeed5436f-6e2a-4933-fe56-f5ffcc455fde.png",
+    "titleName": "Soils In India State Wise"
+  },
+  {
     "fileName": "Indian_Physical009b482e-3c02-3c19-5f8a-1db7874135c5.jpg",
     "titleName": "Indian Physical"
+  },
+  {
+    "fileName": "Indus_River_Systemac9eeb09-7b73-e62a-48c9-9d712d5fb7eb.jpg",
+    "titleName": "Indus River System"
+  },
+  {
+    "fileName": "Brahmaputra459f10a1-e748-f13c-c16f-8fbf0c080d9b.jpg",
+    "titleName": "Brahmaputra"
+  },
+  {
+    "fileName": "Ganga_River_System4c6a3aea-d51e-5d2a-f85e-5a84c906b633.jpg",
+    "titleName": "Ganga River System"
+  },
+  {
+    "fileName": "Yamuna_River_System6367f308-adba-b575-5926-2522e16ffef4.jpg",
+    "titleName": "Yamuna River System"
+  },
+  {
+    "fileName": "Narmada_River_Systembc0543d9-8ac2-3fa6-af01-1827d53b1aed.jpg",
+    "titleName": "Narmada River System"
+  },
+  {
+    "fileName": "Tapi_River_Systemc19f3390-9f46-7ac3-6961-612aaef57696.jpg",
+    "titleName": "Tapi River System"
+  },
+  {
+    "fileName": "Mahanadi_River_System4703eb34-8164-5f5f-2993-71cb94830aaa.jpg",
+    "titleName": "Mahanadi River System"
+  },
+  {
+    "fileName": "Godavari_River_System038803f4-8f26-7f7b-aa6c-28526f432b9e.jpg",
+    "titleName": "Godavari River System"
+  },
+  {
+    "fileName": "Krishna_River_System13283b6e-2e0f-9ce2-1543-78e77f9fd00a.jpg",
+    "titleName": "Krishna River System"
+  },
+  {
+    "fileName": "East_Flowing_River731e6267-b03f-6b11-5b8e-22af7ac915be.jpg",
+    "titleName": "East Flowing River"
+  },
+  {
+    "fileName": "West_flowing_rivers84caec31-a0ce-2ab4-93a5-ad77ded1fe58.png",
+    "titleName": "West flowing rivers"
+  },
+  {
+    "fileName": "River_in_Gulf_of_Khambhat7acc5808-a1a5-5b4a-f302-062ea3d6faaa.jpg",
+    "titleName": "River in Gulf of Khambhat"
+  },
+  {
+    "fileName": "Panch_Prayag812d3187-a1ec-1d5b-ad07-8432c5c03481.jpg",
+    "titleName": "Panch Prayag"
+  },
+  {
+    "fileName": "Indus_Doabsd329e2c7-8ada-59ca-3742-fadcfa922e89.jpg",
+    "titleName": "Indus Doabs"
+  },
+  {
+    "fileName": "Godavari_Basin06063bfc-912b-64f4-50e2-81fb2a2c4fb3.jpg",
+    "titleName": "Godavari Basin"
+  },
+  {
+    "fileName": "Krishna_Basin92a2bb5e-3646-f9bf-ddc6-f904426227b0.jpg",
+    "titleName": "Krishna Basin"
+  },
+  {
+    "fileName": "Kaveri_Basinf35e8c19-3a2f-611c-7ad2-72fae1739e73.jpg",
+    "titleName": "Kaveri Basin"
+  },
+  {
+    "fileName": "Mahanadi_Basin67b37bd4-f04a-7b8a-1c8a-3ffe822ec163.jpg",
+    "titleName": "Mahanadi Basin"
   },
   {
     "fileName": "Coal_Mines_of_India317c913b-c218-b697-a786-76f5f7251088.jpg",
@@ -54,50 +130,6 @@
   {
     "fileName": "India_Myanmar_Boarderb1487608-8c5c-931a-40cf-6939e5768977.png",
     "titleName": "India_Myanmar_Boarder"
-  },
-  {
-    "fileName": "East_Flowing_River731e6267-b03f-6b11-5b8e-22af7ac915be.jpg",
-    "titleName": "East Flowing River"
-  },
-  {
-    "fileName": "Godavari_River_System038803f4-8f26-7f7b-aa6c-28526f432b9e.jpg",
-    "titleName": "Godavari River System"
-  },
-  {
-    "fileName": "Yamuna_River_System6367f308-adba-b575-5926-2522e16ffef4.jpg",
-    "titleName": "Yamuna River System"
-  },
-  {
-    "fileName": "Krishna_River_System13283b6e-2e0f-9ce2-1543-78e77f9fd00a.jpg",
-    "titleName": "Krishna River System"
-  },
-  {
-    "fileName": "Narmada_River_Systembc0543d9-8ac2-3fa6-af01-1827d53b1aed.jpg",
-    "titleName": "Narmada River System"
-  },
-  {
-    "fileName": "Indus_River_Systemac9eeb09-7b73-e62a-48c9-9d712d5fb7eb.jpg",
-    "titleName": "Indus River System"
-  },
-  {
-    "fileName": "Mahanadi_River_System4703eb34-8164-5f5f-2993-71cb94830aaa.jpg",
-    "titleName": "Mahanadi River System"
-  },
-  {
-    "fileName": "River_in_Gulf_of_Khambhat7acc5808-a1a5-5b4a-f302-062ea3d6faaa.jpg",
-    "titleName": "River in Gulf of Khambhat"
-  },
-  {
-    "fileName": "Tapi_River_Systemc19f3390-9f46-7ac3-6961-612aaef57696.jpg",
-    "titleName": "Tapi River System"
-  },
-  {
-    "fileName": "Ganga_River_System4c6a3aea-d51e-5d2a-f85e-5a84c906b633.jpg",
-    "titleName": "Ganga River System"
-  },
-  {
-    "fileName": "West_flowing_rivers84caec31-a0ce-2ab4-93a5-ad77ded1fe58.png",
-    "titleName": "West flowing rivers"
   },
   {
     "fileName": "Countries_on_Equatorae320264-94ee-426b-0437-0232c2b2d5e5.jpg",
@@ -116,21 +148,10 @@
     "titleName": "Central America"
   },
   {
-    "fileName": "Panch_Prayag812d3187-a1ec-1d5b-ad07-8432c5c03481.jpg",
-    "titleName": "Panch Prayag"
-  },
-  {
-    "fileName": "Brahmaputra459f10a1-e748-f13c-c16f-8fbf0c080d9b.jpg",
-    "titleName": "Brahmaputra"
-  },
-  {
     "fileName": "Chagos_Archipelagofe67c25b-d853-9bac-999a-4c1aa27b71b1.jpg",
     "titleName": "Chagos Archipelago"
   },
-  {
-    "fileName": "Biogeographical_Region0a509c75-88a3-c133-c670-8506c222ef1e.jpg",
-    "titleName": "Biogeographical Region"
-  },
+
   {
     "fileName": "Sikkim_China_Bhutanfcd19071-91c4-fc2e-dee2-cc3abfed3f0a.jpg",
     "titleName": "Sikkim-China-Bhutan"
@@ -151,10 +172,7 @@
     "fileName": "Adriatic_Sea0ab9f6ab-6048-d0bb-85b2-936e241f34e5.jpg",
     "titleName": "Adriatic Sea"
   },
-  {
-    "fileName": "Indus_Doabsd329e2c7-8ada-59ca-3742-fadcfa922e89.jpg",
-    "titleName": "Indus Doabs"
-  },
+
   {
     "fileName": "Kaveri_River_System666d83de-3400-eef9-e399-f3e360024fb2.jpg",
     "titleName": "Kaveri River System"
@@ -387,22 +405,7 @@
     "fileName": "Aseana8cb2743-f539-4b12-5f6d-c369cb55319d.png",
     "titleName": "Asean"
   },
-  {
-    "fileName": "Godavari_Basin06063bfc-912b-64f4-50e2-81fb2a2c4fb3.jpg",
-    "titleName": "Godavari Basin"
-  },
-  {
-    "fileName": "Krishna_Basin92a2bb5e-3646-f9bf-ddc6-f904426227b0.jpg",
-    "titleName": "Krishna Basin"
-  },
-  {
-    "fileName": "Kaveri_Basinf35e8c19-3a2f-611c-7ad2-72fae1739e73.jpg",
-    "titleName": "Kaveri Basin"
-  },
-  {
-    "fileName": "Mahanadi_Basin67b37bd4-f04a-7b8a-1c8a-3ffe822ec163.jpg",
-    "titleName": "Mahanadi Basin"
-  },
+
   {
     "fileName": "IMECf48e6013-5514-b54a-8cc6-58de5a48116e.png",
     "titleName": "IMEC"
