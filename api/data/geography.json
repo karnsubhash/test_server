@@ -124,8 +124,24 @@
     "titleName": "Mahanadi Basin"
   },
   {
-    "fileName": "Coal_Mines_of_India317c913b-c218-b697-a786-76f5f7251088.jpg",
-    "titleName": "Coal Mines of India"
+    "fileName": "Iron_Ore_Fields_in_India17210ec1-f4eb-1a1e-9b9c-2743ac1eebf2.png",
+    "titleName": "Iron Ore Fields in India"
+  },
+  {
+    "fileName": "Copper_Fields_in_India3fbe850b-1729-9efc-0e64-d057a661503b.png",
+    "titleName": "Copper Fields in India"
+  },
+  {
+    "fileName": "Bauxite_Zones_in_Indiaea3641e4-33cc-6264-5668-84b130532fed.png",
+    "titleName": "Bauxite Zones in India"
+  },
+  {
+    "fileName": "Coal_Fields_in_India6eaba068-0bc3-20e2-f54a-09421ec7155b.png",
+    "titleName": "Coal Fields in India"
+  },
+  {
+    "fileName": "Oil_Fields_in_India36f705a5-7747-7dbc-1b7a-eccec17f2659.png",
+    "titleName": "Oil Fields in India"
   },
   {
     "fileName": "India_Myanmar_Boarderb1487608-8c5c-931a-40cf-6939e5768977.png",
@@ -151,7 +167,6 @@
     "fileName": "Chagos_Archipelagofe67c25b-d853-9bac-999a-4c1aa27b71b1.jpg",
     "titleName": "Chagos Archipelago"
   },
-
   {
     "fileName": "Sikkim_China_Bhutanfcd19071-91c4-fc2e-dee2-cc3abfed3f0a.jpg",
     "titleName": "Sikkim-China-Bhutan"
@@ -172,7 +187,6 @@
     "fileName": "Adriatic_Sea0ab9f6ab-6048-d0bb-85b2-936e241f34e5.jpg",
     "titleName": "Adriatic Sea"
   },
-
   {
     "fileName": "Kaveri_River_System666d83de-3400-eef9-e399-f3e360024fb2.jpg",
     "titleName": "Kaveri River System"
@@ -405,7 +419,6 @@
     "fileName": "Aseana8cb2743-f539-4b12-5f6d-c369cb55319d.png",
     "titleName": "Asean"
   },
-
   {
     "fileName": "IMECf48e6013-5514-b54a-8cc6-58de5a48116e.png",
     "titleName": "IMEC"
@@ -418,4 +431,5 @@
     "fileName": "Highest_Peak_of_Continents73fe28db-d02d-6d0f-acb3-60143d444933.jpg",
     "titleName": "Highest Peak of Continents"
   }
+  
 ]
