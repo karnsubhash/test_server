@@ -17,8 +17,8 @@ const HOSTING_PORT = process.env.SELF_PORT || 8017;
 let MAP_DATA = [];
 let THEME_SETTING_DATA = {};
 const geographyFilePath = path.join(__dirname, "data", "geography.json");
-const ancientHistoryFilePath = path.join(__dirname, "data", "geography.json");
-const medievalHistoryFilePath = path.join(__dirname, "data", "geography.json");
+const ancientHistoryFilePath = path.join(__dirname, "data", "ancientHistory.json");
+const medievalHistoryFilePath = path.join(__dirname, "data", "medievalHistory.json");
 
 const currentAffairsFilePath = path.join(
   __dirname,
@@ -37,6 +37,23 @@ let GEOGRAPHY_JSON_DATA = fs.readFile(geographyFilePath, (err, data) => {
     return JSON.parse(data);
   }
 });
+
+let ANCIENT_HISTORY_JSON_DATA = fs.readFile(ancientHistoryFilePath, (err, data) => {
+  if (err) {
+    return [];
+  } else {
+    return JSON.parse(data);
+  }
+});
+
+let MEDIEVAL_HISTORY_JSON_DATA = fs.readFile(medievalHistoryFilePath, (err, data) => {
+  if (err) {
+    return [];
+  } else {
+    return JSON.parse(data);
+  }
+});
+
 let CURRENT_AFFAIRS_JSON_DATA = fs.readFile(
   currentAffairsFilePath,
   (err, data) => {
@@ -152,7 +169,7 @@ app.get("/getAncientHistoryJsonFromBackend", (req, res) => {
       res.status(200).send(JSON.parse(data));
 
       //console.log("geography.json -> ", JSON.parse(data));
-      GEOGRAPHY_JSON_DATA = JSON.parse(data);
+      ANCIENT_HISTORY_JSON_DATA = JSON.parse(data);
     }
   });
 });
@@ -166,7 +183,7 @@ app.get("/getMedievalHistoryJsonFromBackend", (req, res) => {
       res.status(200).send(JSON.parse(data));
 
       //console.log("geography.json -> ", JSON.parse(data));
-      GEOGRAPHY_JSON_DATA = JSON.parse(data);
+      MEDIEVAL_HISTORY_JSON_DATA = JSON.parse(data);
     }
   });
 });
