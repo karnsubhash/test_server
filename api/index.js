@@ -30,29 +30,29 @@ const importantPointsFilePath = path.join(
   "data",
   "importantPoints.json"
 );
-let GEOGRAPHY_JSON_DATA = fs.readFile(geographyFilePath, (err, data) => {
-  if (err) {
-    return [];
-  } else {
-    return JSON.parse(data);
-  }
-});
+// let GEOGRAPHY_JSON_DATA = fs.readFile(geographyFilePath, (err, data) => {
+//   if (err) {
+//     return [];
+//   } else {
+//     return JSON.parse(data);
+//   }
+// });
 
-let ANCIENT_HISTORY_JSON_DATA = fs.readFile(ancientHistoryFilePath, (err, data) => {
-  if (err) {
-    return [];
-  } else {
-    return JSON.parse(data);
-  }
-});
+// let ANCIENT_HISTORY_JSON_DATA = fs.readFile(ancientHistoryFilePath, (err, data) => {
+//   if (err) {
+//     return [];
+//   } else {
+//     return JSON.parse(data);
+//   }
+// });
 
-let MEDIEVAL_HISTORY_JSON_DATA = fs.readFile(medievalHistoryFilePath, (err, data) => {
-  if (err) {
-    return [];
-  } else {
-    return JSON.parse(data);
-  }
-});
+// let MEDIEVAL_HISTORY_JSON_DATA = fs.readFile(medievalHistoryFilePath, (err, data) => {
+//   if (err) {
+//     return [];
+//   } else {
+//     return JSON.parse(data);
+//   }
+// });
 
 let CURRENT_AFFAIRS_JSON_DATA = fs.readFile(
   currentAffairsFilePath,
@@ -155,7 +155,7 @@ app.get("/getgeoGraphyJsonFromBackend", (req, res) => {
       res.status(200).send(JSON.parse(data));
 
       //console.log("geography.json -> ", JSON.parse(data));
-      GEOGRAPHY_JSON_DATA = JSON.parse(data);
+      // GEOGRAPHY_JSON_DATA = JSON.parse(data);
     }
   });
 });
@@ -169,7 +169,7 @@ app.get("/getAncientHistoryJsonFromBackend", (req, res) => {
       res.status(200).send(JSON.parse(data));
 
       //console.log("geography.json -> ", JSON.parse(data));
-      ANCIENT_HISTORY_JSON_DATA = JSON.parse(data);
+      // ANCIENT_HISTORY_JSON_DATA = JSON.parse(data);
     }
   });
 });
@@ -183,7 +183,7 @@ app.get("/getMedievalHistoryJsonFromBackend", (req, res) => {
       res.status(200).send(JSON.parse(data));
 
       //console.log("geography.json -> ", JSON.parse(data));
-      MEDIEVAL_HISTORY_JSON_DATA = JSON.parse(data);
+      // MEDIEVAL_HISTORY_JSON_DATA = JSON.parse(data);
     }
   });
 });
