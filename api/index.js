@@ -116,6 +116,14 @@ app.use(
   express.static(path.join(__dirname, "geographyImages"))
 );
 app.use(
+  "/ancientHistoryImages",
+  express.static(path.join(__dirname, "ancientHistoryImages"))
+);
+app.use(
+  "/medievalHistoryImages",
+  express.static(path.join(__dirname, "medievalHistoryImages"))
+);
+app.use(
   "/currentAffairsImages",
   express.static(path.join(__dirname, "currentAffairsImages"))
 );
