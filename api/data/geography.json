@@ -4,6 +4,10 @@
     "titleName": "Soils in India"
   },
   {
+    "fileName": "Rock_System9f203d9f-d9c6-c5a7-1acf-96b74303426c.png",
+    "titleName": "Rock System"
+  },
+  {
     "fileName": "Forest_In_Indiaa64fd860-4078-7710-599c-b7de94aa7eb4.png",
     "titleName": "Forest in India"
   },
@@ -34,7 +38,15 @@
   {
     "fileName": "South_India_Hills1d368af4-c1e9-320d-66a8-de03029d9e46.png",
     "titleName": "South India Hills"
+  }, 
+  {
+    "fileName": "North_East_Hillsf495cfc0-07ec-7fd4-6bc0-68f8e8c1adfb.jpg",
+    "titleName": "North East Hills"
   },
+  {
+    "fileName": "Trans_Himalaya1238aea6-9800-5c16-c1a6-748e492f40c9.png",
+    "titleName": "Trans Himalaya"
+  }, 
   {
     "fileName": "Indian_Coastline16d3aaa8-8070-cd88-283d-64486b75ff32.jpg",
     "titleName": "Indian Coastline"
@@ -47,9 +59,18 @@
     "fileName": "Corals_In_Indiad5495fed-4cf3-39f0-a0ca-90f9bed36b11.png",
     "titleName": "Corals In India"
   },
+
+  {
+    "fileName": "Parmanu_Urja_Sanyantra388e287e-cd69-4f8b-8952-265373c834a7.png",
+    "titleName": "Parmanu Urja Sanyantra"
+  },
   {
     "fileName": "India_Coordinatesa3b1bba5-d3fa-8220-6146-7d6ee19e576f.jpg",
     "titleName": "India Coordinates"
+  },
+  {
+    "fileName": "Language_Familiesd517e864-6569-78f7-e4b8-c34e627faf28.jpg",
+    "titleName": "Language Families"
   },
   {
     "fileName": "Indian_Political2270ae48-28e4-9c80-96e3-b7f8a1acbd30.jpg",
@@ -98,6 +119,10 @@
   {
     "fileName": "Krishna_River_System13283b6e-2e0f-9ce2-1543-78e77f9fd00a.jpg",
     "titleName": "Krishna River System"
+  },
+  {
+    "fileName": "Kaveri_River_System666d83de-3400-eef9-e399-f3e360024fb2.jpg",
+    "titleName": "Kaveri River System"
   },
   {
     "fileName": "East_Flowing_River731e6267-b03f-6b11-5b8e-22af7ac915be.jpg",
@@ -160,6 +185,25 @@
     "titleName": "India_Myanmar_Boarder"
   },
   {
+    "fileName": "Sikkim_China_Bhutanfcd19071-91c4-fc2e-dee2-cc3abfed3f0a.jpg",
+    "titleName": "Sikkim-China-Bhutan"
+  },{
+    "fileName": "Disputed_Ladakh33fd1f19-8711-bcbe-53e9-00a660b1d7eb.jpg",
+    "titleName": "Disputed Ladakh"
+  },
+  {
+    "fileName": "Jammu___Kashmir_Ladakha56645ad-efe0-5a2d-7e2a-f199e9c02795.jpg",
+    "titleName": "Jammu & Kashmir-Ladakh"
+  },
+  {
+    "fileName": "Indian_Oceand5c8f11f-c3af-75bf-c2e2-d54cfb5465ed.jpg",
+    "titleName": "Indian Ocean"
+  }, 
+  {
+    "fileName": "Indo_Pacific9aeff7ed-4b66-fa64-95d9-482055f4a58f.jpg",
+    "titleName": "Indo Pacific"
+  },
+  {
     "fileName": "Countries_on_Equatorae320264-94ee-426b-0437-0232c2b2d5e5.jpg",
     "titleName": "Countries on Equator"
   },
@@ -180,10 +224,6 @@
     "titleName": "Chagos Archipelago"
   },
   {
-    "fileName": "Sikkim_China_Bhutanfcd19071-91c4-fc2e-dee2-cc3abfed3f0a.jpg",
-    "titleName": "Sikkim-China-Bhutan"
-  },
-  {
     "fileName": "Africa5281f29d-10bd-24cc-43ef-30dbb3e937b1.jpg",
     "titleName": "Africa"
   },
@@ -191,17 +231,10 @@
     "fileName": "CSTO_Members83dba792-e87a-cab0-b845-670708e1ed1a.jpg",
     "titleName": "CSTO Members"
   },
-  {
-    "fileName": "Disputed_Ladakh33fd1f19-8711-bcbe-53e9-00a660b1d7eb.jpg",
-    "titleName": "Disputed Ladakh"
-  },
+  
   {
     "fileName": "Adriatic_Sea0ab9f6ab-6048-d0bb-85b2-936e241f34e5.jpg",
     "titleName": "Adriatic Sea"
-  },
-  {
-    "fileName": "Kaveri_River_System666d83de-3400-eef9-e399-f3e360024fb2.jpg",
-    "titleName": "Kaveri River System"
   },
   {
     "fileName": "Australia086bde2c-3277-c81e-b38c-902328ea2da3.jpg",
@@ -228,15 +261,11 @@
     "titleName": "Asian Mountain Ranges"
   },
   {
-    "fileName": "Jammu___Kashmir_Ladakha56645ad-efe0-5a2d-7e2a-f199e9c02795.jpg",
-    "titleName": "Jammu & Kashmir-Ladakh"
-  },
-  {
     "fileName": "BIMSTEC12adab32-4463-6bbe-667c-23a52d93641e.jpg",
     "titleName": "BIMSTEC"
   },
   {
-    "fileName": "The_Great_Lakesba5e7d37-7ca5-9fee-b8dd-5d9824b51aff.jpg",
+    "fileName": "The_Great_Lakesba5e7d37-7ca5-9fee-b8dd-5d9824b51aff.png",
     "titleName": "The Great Lakes"
   },
   {
@@ -262,30 +291,14 @@
   {
     "fileName": "Horn_of_Africad0fcd358-636d-8dc5-69ee-f8d4e6ad0a5e.jpg",
     "titleName": "Horn of Africa"
-  },
-  {
-    "fileName": "Himalaya592f6931-8b9d-b99b-d877-63b2367c52cd.jpg",
-    "titleName": "Himalaya"
-  },
+  }, 
   {
     "fileName": "South_Pacific_Islandsef49ef0b-ca5c-95cb-cdcf-53dacc63cc2b.jpg",
     "titleName": "South Pacific Islands"
   },
   {
-    "fileName": "Language_Familiesd517e864-6569-78f7-e4b8-c34e627faf28.jpg",
-    "titleName": "Language Families"
-  },
-  {
     "fileName": "Vanilla_Islandscecccafd-cf3f-c4e0-c1f8-04c90c2c7626.jpg",
     "titleName": "Vanilla Islands"
-  },
-  {
-    "fileName": "Indian_Oceand5c8f11f-c3af-75bf-c2e2-d54cfb5465ed.jpg",
-    "titleName": "Indian Ocean"
-  },
-  {
-    "fileName": "Indo_Pacific9aeff7ed-4b66-fa64-95d9-482055f4a58f.jpg",
-    "titleName": "Indo Pacific"
   },
   {
     "fileName": "Philippines5e72033f-4daa-50cf-43da-f5f2d7f5b6e7.jpg",
@@ -334,10 +347,6 @@
   {
     "fileName": "North_Americab35bf201-0a00-7c39-8e7b-fd6c8434ae25.jpg",
     "titleName": "North America"
-  },
-  {
-    "fileName": "North_East_Hillsf495cfc0-07ec-7fd4-6bc0-68f8e8c1adfb.jpg",
-    "titleName": "North East Hills"
   },
   {
     "fileName": "Plateau_in_World3f52d3fc-2d43-68fc-9d0a-c487d81277ea.jpg",
@@ -392,10 +401,6 @@
     "titleName": "Bihar Division & Dist"
   },
   {
-    "fileName": "Rock_System9f203d9f-d9c6-c5a7-1acf-96b74303426c.png",
-    "titleName": "Rock System"
-  },
-  {
     "fileName": "gangace6c4c3e-ab44-0371-eef8-ee31e968e3df.png",
     "titleName": "ganga"
   },
@@ -404,24 +409,12 @@
     "titleName": "Climate_Bihar"
   },
   {
-    "fileName": "himalaya1238aea6-9800-5c16-c1a6-748e492f40c9.png",
-    "titleName": "himalaya"
-  },
-  {
-    "fileName": "Lakes63592e69-f7e5-3ba8-2d75-5c7b1084a7d9.png",
-    "titleName": "Lakes"
-  },
-  {
-    "fileName": "Parmanu_Urja_Sanyantra388e287e-cd69-4f8b-8952-265373c834a7.png",
-    "titleName": "Parmanu_Urja_Sanyantra"
-  },
-  {
     "fileName": "West_Asia8508e276-0cef-2f9c-57c1-5ae743bf71cd.png",
     "titleName": "West_Asia"
   },
   {
     "fileName": "IndianOcean_Mein_India_China0fed0e7f-057d-5377-40dd-f4b785b85153.png",
-    "titleName": "IndianOcean_Mein_India_China"
+    "titleName": "Indian Ocean(India-China)"
   },
   {
     "fileName": "Bhakti_Shant3fbfc52e-489f-d364-b2f6-095b4bcf0b1d.png",
