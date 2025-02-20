@@ -36,17 +36,9 @@
     "titleName": "Plateau in India"
   },
   {
-    "fileName": "South_India_Hills1d368af4-c1e9-320d-66a8-de03029d9e46.png",
-    "titleName": "South India Hills"
-  }, 
-  {
-    "fileName": "North_East_Hillsf495cfc0-07ec-7fd4-6bc0-68f8e8c1adfb.jpg",
-    "titleName": "North East Hills"
+    "fileName": "Earthquake_Hazard_Zone6b0daba0-e58a-8a29-19ae-10aee9b033c0.jpg",
+    "titleName": "Earthquake Hazard Zone"
   },
-  {
-    "fileName": "Trans_Himalaya1238aea6-9800-5c16-c1a6-748e492f40c9.png",
-    "titleName": "Trans Himalaya"
-  }, 
   {
     "fileName": "Indian_Coastline16d3aaa8-8070-cd88-283d-64486b75ff32.jpg",
     "titleName": "Indian Coastline"
@@ -59,7 +51,6 @@
     "fileName": "Corals_In_Indiad5495fed-4cf3-39f0-a0ca-90f9bed36b11.png",
     "titleName": "Corals In India"
   },
-
   {
     "fileName": "Parmanu_Urja_Sanyantra388e287e-cd69-4f8b-8952-265373c834a7.png",
     "titleName": "Parmanu Urja Sanyantra"
@@ -83,6 +74,18 @@
   {
     "fileName": "Indian_Physical009b482e-3c02-3c19-5f8a-1db7874135c5.jpg",
     "titleName": "Indian Physical"
+  },
+  {
+    "fileName": "South_India_Hills1d368af4-c1e9-320d-66a8-de03029d9e46.png",
+    "titleName": "South India Hills"
+  },
+  {
+    "fileName": "North_East_Hillsf495cfc0-07ec-7fd4-6bc0-68f8e8c1adfb.jpg",
+    "titleName": "North East Hills"
+  },
+  {
+    "fileName": "Trans_Himalaya1238aea6-9800-5c16-c1a6-748e492f40c9.png",
+    "titleName": "Trans Himalaya"
   },
   {
     "fileName": "Indus_River_Systemac9eeb09-7b73-e62a-48c9-9d712d5fb7eb.jpg",
@@ -187,7 +190,8 @@
   {
     "fileName": "Sikkim_China_Bhutanfcd19071-91c4-fc2e-dee2-cc3abfed3f0a.jpg",
     "titleName": "Sikkim-China-Bhutan"
-  },{
+  },
+  {
     "fileName": "Disputed_Ladakh33fd1f19-8711-bcbe-53e9-00a660b1d7eb.jpg",
     "titleName": "Disputed Ladakh"
   },
@@ -195,10 +199,19 @@
     "fileName": "Jammu___Kashmir_Ladakha56645ad-efe0-5a2d-7e2a-f199e9c02795.jpg",
     "titleName": "Jammu & Kashmir-Ladakh"
   },
+
+  {
+    "fileName": "Type_of_Rocksea81aec2-7dd9-a4bc-f08f-68214ae6bae0.jpg",
+    "titleName": "Type of Rocks"
+  },
+  {
+    "fileName": "Interior_of_Earth156979de-dfaa-58f9-faae-fd23c70e7709.jpg",
+    "titleName": "Interior of Earth"
+  },
   {
     "fileName": "Indian_Oceand5c8f11f-c3af-75bf-c2e2-d54cfb5465ed.jpg",
     "titleName": "Indian Ocean"
-  }, 
+  },
   {
     "fileName": "Indo_Pacific9aeff7ed-4b66-fa64-95d9-482055f4a58f.jpg",
     "titleName": "Indo Pacific"
@@ -231,7 +244,6 @@
     "fileName": "CSTO_Members83dba792-e87a-cab0-b845-670708e1ed1a.jpg",
     "titleName": "CSTO Members"
   },
-  
   {
     "fileName": "Adriatic_Sea0ab9f6ab-6048-d0bb-85b2-936e241f34e5.jpg",
     "titleName": "Adriatic Sea"
@@ -291,7 +303,7 @@
   {
     "fileName": "Horn_of_Africad0fcd358-636d-8dc5-69ee-f8d4e6ad0a5e.jpg",
     "titleName": "Horn of Africa"
-  }, 
+  },
   {
     "fileName": "South_Pacific_Islandsef49ef0b-ca5c-95cb-cdcf-53dacc63cc2b.jpg",
     "titleName": "South Pacific Islands"
@@ -435,5 +447,9 @@
   {
     "fileName": "Highest_Peak_of_Continents73fe28db-d02d-6d0f-acb3-60143d444933.jpg",
     "titleName": "Highest Peak of Continents"
+  },
+  {
+    "fileName": "Earthquake_Zone__World_cddeb006-0654-4e1f-4906-de9e9f5e173c.jpg",
+    "titleName": "Earthquake Zone (World)"
   }
 ]
