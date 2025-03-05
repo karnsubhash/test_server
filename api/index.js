@@ -19,6 +19,7 @@ let THEME_SETTING_DATA = {};
 const geographyFilePath = path.join(__dirname, "data", "geography.json");
 const ancientHistoryFilePath = path.join(__dirname, "data", "ancientHistory.json");
 const medievalHistoryFilePath = path.join(__dirname, "data", "medievalHistory.json");
+const economicsFilePath = path.join(__dirname, "data", "economicsIr.json");
 
 const currentAffairsFilePath = path.join(
   __dirname,
@@ -124,6 +125,10 @@ app.use(
   express.static(path.join(__dirname, "medievalHistoryImages"))
 );
 app.use(
+  "/economicsIrImages",
+  express.static(path.join(__dirname, "economicsIrImages"))
+);
+app.use(
   "/currentAffairsImages",
   express.static(path.join(__dirname, "currentAffairsImages"))
 );
@@ -184,6 +189,20 @@ app.get("/getAncientHistoryJsonFromBackend", (req, res) => {
 
 app.get("/getMedievalHistoryJsonFromBackend", (req, res) => {
   fs.readFile(medievalHistoryFilePath, (err, data) => {
+    if (err) {
+      res.status(501).send(err);
+    } else {
+      console.log("Sending Data to Client", JSON.parse(data));
+      res.status(200).send(JSON.parse(data));
+
+      //console.log("geography.json -> ", JSON.parse(data));
+      // MEDIEVAL_HISTORY_JSON_DATA = JSON.parse(data);
+    }
+  });
+});
+
+app.get("/getEconomicsIrJsonFromBackend", (req, res) => {
+  fs.readFile(economicsFilePath, (err, data) => {
     if (err) {
       res.status(501).send(err);
     } else {
