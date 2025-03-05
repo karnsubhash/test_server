@@ -45,6 +45,17 @@ let MEDIEVAL_HISTORY_JSON_DATA = fs.readFile(
   }
 );
 
+let ECONOMICS_IR_JSON_DATA = fs.readFile(
+  "./api/data/economicsIr.json",
+  (err, data) => {
+    if (err) {
+      return [];
+    } else {
+      return JSON.parse(data);
+    }
+  }
+);
+
 let CURRENT_AFFAIRS_JSON_DATA = fs.readFile(
   "./api/data/currentAffairs.json",
   (err, data) => {
@@ -98,6 +109,17 @@ const createMedievalImagesStorage = () => {
   });
 };
 
+const createEconomicsIrStorage = () => {
+  return multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, "api/economicsIrImages");
+    },
+    filename: (req, file, cb) => {
+      cb(null, file.originalname);
+    },
+  });
+};
+
 const createCurrentAffairsImagesStorage = () => {
   return multer.diskStorage({
     destination: (req, file, cb) => {
@@ -125,6 +147,11 @@ const uploadMedievalHistoryImages = multer({
   limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
 }).single("file");
 
+const uploadEconomicsImages = multer({
+  storage: createEconomicsIrStorage(),
+  limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
+}).single("file");
+ 
 const uploadCurrentImages = multer({
   storage: createCurrentAffairsImagesStorage(),
   limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
@@ -170,6 +197,11 @@ app.use(
   "/api/medievalHistoryImages",
   express.static(path.join(__dirname, "/api/medievalHistoryImages"))
 );
+app.use(
+  "/api/economicsIrImages",
+  express.static(path.join(__dirname, "/api/economicsIrImages"))
+);
+ 
 app.use(
   "/api/currentAffairsImages",
   express.static(path.join(__dirname, "/api/currentAffairsImages"))
@@ -242,6 +274,21 @@ app.get("/getMedievalHistoryJsonFromBackend", (req, res) => {
     }
   });
 });
+
+app.get("/getEconomicsIrJsonFromBackend", (req, res) => {
+  fs.readFile("./api/data/economicsIr.json", (err, data) => {
+    if (err) {
+      res.status(501).send(err);
+    } else {
+      // console.log("Sending Data to Client", JSON.parse(data));
+      res.status(200).send(JSON.parse(data));
+
+      // console.log("geography.json -> ", JSON.parse(data));
+      ECONOMICS_IR_JSON_DATA = JSON.parse(data);
+    }
+  });
+});
+
 
 app.get("/getCurrentAffairsJsonFromBackend", (req, res) => {
   fs.readFile("./api/data/currentAffairs.json", (err, data) => {
@@ -369,6 +416,39 @@ app.post("/uploadMedievalHistoryImagesToBackend", async (req, res) => {
         //console.log("Successfully wrote file");
         MEDIEVAL_HISTORY_JSON_DATA = finalData;
         res.status(200).send(MEDIEVAL_HISTORY_JSON_DATA);
+      }
+    } catch (e) {}
+  });
+});
+
+app.post("/uploadEconomicsIrImagesToBackend", async (req, res) => {
+  //console.log("req, res", req.body);
+
+  await uploadEconomicsImages(req, res, (err) => {
+    if (err) {
+      // return res.status(400).send({ message: err.message });
+    }
+    // res.send({ message: "File uploaded successfully" });
+  });
+
+  const economicsIrJsonData = req.body;
+
+  const data = JSON.parse(economicsIrJsonData.metaData);
+  const finalData = [
+    ...ECONOMICS_IR_JSON_DATA,
+    { fileName: data.fileName, titleName: data.titleName },
+  ];
+
+  const jsonString = JSON.stringify(finalData);
+  fs.writeFile("./api/data/economicsIr.json", jsonString, (err) => {
+    try {
+      if (err) {
+        console.log("Error writing file", err);
+        res.status(501).send(err);
+      } else {
+        //console.log("Successfully wrote file");
+        ECONOMICS_IR_JSON_DATA = finalData;
+        res.status(200).send(ECONOMICS_IR_JSON_DATA);
       }
     } catch (e) {}
   });
