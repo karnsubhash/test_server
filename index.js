@@ -131,7 +131,7 @@ const createEconomicsIrStorage = () => {
   });
 };
 
-const createEnvironmentStorage = () => {
+const createEnvironmentImagesStorage = () => {
   return multer.diskStorage({
     destination: (req, file, cb) => {
       cb(null, "api/environmentImages");
