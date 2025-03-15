@@ -56,6 +56,17 @@ let ECONOMICS_IR_JSON_DATA = fs.readFile(
   }
 );
 
+let ENVIRONMENT_JSON_DATA = fs.readFile(
+  "./api/data/environment.json",
+  (err, data) => {
+    if (err) {
+      return [];
+    } else {
+      return JSON.parse(data);
+    }
+  }
+);
+
 let CURRENT_AFFAIRS_JSON_DATA = fs.readFile(
   "./api/data/currentAffairs.json",
   (err, data) => {
@@ -120,6 +131,17 @@ const createEconomicsIrStorage = () => {
   });
 };
 
+const createEnvironmentStorage = () => {
+  return multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, "api/environmentImages");
+    },
+    filename: (req, file, cb) => {
+      cb(null, file.originalname);
+    },
+  });
+};
+
 const createCurrentAffairsImagesStorage = () => {
   return multer.diskStorage({
     destination: (req, file, cb) => {
@@ -151,7 +173,12 @@ const uploadEconomicsImages = multer({
   storage: createEconomicsIrStorage(),
   limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
 }).single("file");
- 
+
+const uploadEnvironmentImages = multer({
+  storage: createEnvironmentImagesStorage(),
+  limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
+}).single("file");
+
 const uploadCurrentImages = multer({
   storage: createCurrentAffairsImagesStorage(),
   limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
@@ -201,7 +228,11 @@ app.use(
   "/api/economicsIrImages",
   express.static(path.join(__dirname, "/api/economicsIrImages"))
 );
- 
+app.use(
+  "/api/environmentImages",
+  express.static(path.join(__dirname, "/api/environmentImages"))
+);
+
 app.use(
   "/api/currentAffairsImages",
   express.static(path.join(__dirname, "/api/currentAffairsImages"))
@@ -289,16 +320,23 @@ app.get("/getEconomicsIrJsonFromBackend", (req, res) => {
   });
 });
 
+app.get("/getEnvironmentJsonFromBackend", (req, res) => {
+  fs.readFile("./api/data/environment.json", (err, data) => {
+    if (err) {
+      res.status(501).send(err);
+    } else {
+      res.status(200).send(JSON.parse(data));
+      ENVIRONMENT_JSON_DATA = JSON.parse(data);
+    }
+  });
+});
 
 app.get("/getCurrentAffairsJsonFromBackend", (req, res) => {
   fs.readFile("./api/data/currentAffairs.json", (err, data) => {
     if (err) {
       res.status(501).send(err);
     } else {
-      // console.log("Sending Data to Client", JSON.parse(data));
       res.status(200).send(JSON.parse(data));
-
-      // console.log("geography.json -> ", JSON.parse(data));
       CURRENT_AFFAIRS_JSON_DATA = JSON.parse(data);
     }
   });
@@ -309,10 +347,7 @@ app.get("/getImportantPointsjson", (req, res) => {
     if (err) {
       res.status(501).send(err);
     } else {
-      // console.log("Sending Data to Client", JSON.parse(data));
       res.status(200).send(JSON.parse(data));
-
-      //console.log("geography.json -> ", JSON.parse(data));
       IMPORTANT_POINTS_JSON_DATA = JSON.parse(data);
     }
   });
@@ -331,8 +366,6 @@ app.post("/uploadGeographyImagesToBackend", async (req, res) => {
   });
 
   const geographyJsonData = req.body;
-
-  // console.log("geographyJsonData", geographyJsonData);
 
   const data = JSON.parse(geographyJsonData.metaData);
   const finalData = [
@@ -454,6 +487,38 @@ app.post("/uploadEconomicsIrImagesToBackend", async (req, res) => {
   });
 });
 
+app.post("/uploadEnvironmentImagesToBackend", async (req, res) => {
+  //console.log("req, res", req.body);
+
+  await uploadEnvironmentImages(req, res, (err) => {
+    if (err) {
+      // return res.status(400).send({ message: err.message });
+    }
+    // res.send({ message: "File uploaded successfully" });
+  });
+
+  const environmentJsonData = req.body;
+
+  const data = JSON.parse(environmentJsonData.metaData);
+  const finalData = [
+    ...ENVIRONMENT_JSON_DATA,
+    { fileName: data.fileName, titleName: data.titleName },
+  ];
+
+  const jsonString = JSON.stringify(finalData);
+  fs.writeFile("./api/data/environment.json", jsonString, (err) => {
+    try {
+      if (err) {
+        console.log("Error writing file", err);
+        res.status(501).send(err);
+      } else {
+        ENVIRONMENT_JSON_DATA = finalData;
+        res.status(200).send(ENVIRONMENT_JSON_DATA);
+      }
+    } catch (e) {}
+  });
+});
+
 app.post("/uploadCurrentAffairsImagesToBackend", async (req, res) => {
   //console.log("req, res", req.body);
 
@@ -465,8 +530,6 @@ app.post("/uploadCurrentAffairsImagesToBackend", async (req, res) => {
   });
 
   const currentAffairsJsonData = req.body;
-
-  // console.log("geographyJsonData", geographyJsonData);
 
   const data = JSON.parse(currentAffairsJsonData.metaData);
   const finalData = [

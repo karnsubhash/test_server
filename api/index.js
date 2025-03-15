@@ -14,12 +14,19 @@ const cors = require("cors");
 //DECLARATION USER DEFINED FUNCTIONS
 
 const HOSTING_PORT = process.env.SELF_PORT || 8017;
-let MAP_DATA = [];
-let THEME_SETTING_DATA = {};
 const geographyFilePath = path.join(__dirname, "data", "geography.json");
-const ancientHistoryFilePath = path.join(__dirname, "data", "ancientHistory.json");
-const medievalHistoryFilePath = path.join(__dirname, "data", "medievalHistory.json");
+const ancientHistoryFilePath = path.join(
+  __dirname,
+  "data",
+  "ancientHistory.json"
+);
+const medievalHistoryFilePath = path.join(
+  __dirname,
+  "data",
+  "medievalHistory.json"
+);
 const economicsFilePath = path.join(__dirname, "data", "economicsIr.json");
+const environmentFilePath = path.join(__dirname, "data", "environment.json");
 
 const currentAffairsFilePath = path.join(
   __dirname,
@@ -31,42 +38,6 @@ const importantPointsFilePath = path.join(
   "data",
   "importantPoints.json"
 );
-// let GEOGRAPHY_JSON_DATA = fs.readFile(geographyFilePath, (err, data) => {
-//   if (err) {
-//     return [];
-//   } else {
-//     return JSON.parse(data);
-//   }
-// });
-
-// let ANCIENT_HISTORY_JSON_DATA = fs.readFile(ancientHistoryFilePath, (err, data) => {
-//   if (err) {
-//     return [];
-//   } else {
-//     return JSON.parse(data);
-//   }
-// });
-
-// let MEDIEVAL_HISTORY_JSON_DATA = fs.readFile(medievalHistoryFilePath, (err, data) => {
-//   if (err) {
-//     return [];
-//   } else {
-//     return JSON.parse(data);
-//   }
-// });
-
-let CURRENT_AFFAIRS_JSON_DATA = fs.readFile(
-  currentAffairsFilePath,
-  (err, data) => {
-    if (err) {
-      return [];
-    } else {
-      return JSON.parse(data);
-    }
-  }
-);
-
-let IMPORTANT_POINTS_JSON_DATA = [];
 
 const SELF_IP = process.env.SELF_IP || "localhost";
 const allowedOrigins = [
@@ -129,6 +100,11 @@ app.use(
   express.static(path.join(__dirname, "economicsIrImages"))
 );
 app.use(
+  "/environmentImages",
+  express.static(path.join(__dirname, "environmentImages"))
+);
+
+app.use(
   "/currentAffairsImages",
   express.static(path.join(__dirname, "currentAffairsImages"))
 );
@@ -166,9 +142,6 @@ app.get("/getgeoGraphyJsonFromBackend", (req, res) => {
     } else {
       console.log("Sending Data to Client", JSON.parse(data));
       res.status(200).send(JSON.parse(data));
-
-      //console.log("geography.json -> ", JSON.parse(data));
-      // GEOGRAPHY_JSON_DATA = JSON.parse(data);
     }
   });
 });
@@ -180,9 +153,6 @@ app.get("/getAncientHistoryJsonFromBackend", (req, res) => {
     } else {
       console.log("Sending Data to Client", JSON.parse(data));
       res.status(200).send(JSON.parse(data));
-
-      //console.log("geography.json -> ", JSON.parse(data));
-      // ANCIENT_HISTORY_JSON_DATA = JSON.parse(data);
     }
   });
 });
@@ -194,9 +164,6 @@ app.get("/getMedievalHistoryJsonFromBackend", (req, res) => {
     } else {
       console.log("Sending Data to Client", JSON.parse(data));
       res.status(200).send(JSON.parse(data));
-
-      //console.log("geography.json -> ", JSON.parse(data));
-      // MEDIEVAL_HISTORY_JSON_DATA = JSON.parse(data);
     }
   });
 });
@@ -208,14 +175,20 @@ app.get("/getEconomicsIrJsonFromBackend", (req, res) => {
     } else {
       console.log("Sending Data to Client", JSON.parse(data));
       res.status(200).send(JSON.parse(data));
-
-      //console.log("geography.json -> ", JSON.parse(data));
-      // MEDIEVAL_HISTORY_JSON_DATA = JSON.parse(data);
     }
   });
 });
 
-
+app.get("/getEnvironmentJsonFromBackend", (req, res) => {
+  fs.readFile(environmentFilePath, (err, data) => {
+    if (err) {
+      res.status(501).send(err);
+    } else {
+      console.log("Sending Data to Client", JSON.parse(data));
+      res.status(200).send(JSON.parse(data));
+    }
+  });
+});
 
 app.get("/getCurrentAffairsJsonFromBackend", (req, res) => {
   fs.readFile(currentAffairsFilePath, (err, data) => {
@@ -224,9 +197,6 @@ app.get("/getCurrentAffairsJsonFromBackend", (req, res) => {
     } else {
       console.log("Sending Data to Client", JSON.parse(data));
       res.status(200).send(JSON.parse(data));
-
-      //console.log("geography.json -> ", JSON.parse(data));
-      CURRENT_AFFAIRS_JSON_DATA = JSON.parse(data);
     }
   });
 });
@@ -238,9 +208,6 @@ app.get("/getImportantPointsjson", (req, res) => {
     } else {
       console.log("Sending Data to Client", JSON.parse(data));
       res.status(200).send(JSON.parse(data));
-
-      //console.log("geography.json -> ", JSON.parse(data));
-      IMPORTANT_POINTS_JSON_DATA = JSON.parse(data);
     }
   });
 });
