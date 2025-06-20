@@ -343,7 +343,7 @@ app.get("/getCurrentAffairsJsonFromBackend", (req, res) => {
 });
 
 app.get("/getImportantPointsjson", (req, res) => {
-  fs.readFile("./importantPoints.json", (err, data) => {
+  fs.readFile("./api/data/importantPoints.json", (err, data) => {
     if (err) {
       res.status(501).send(err);
     } else {

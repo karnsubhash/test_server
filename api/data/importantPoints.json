@@ -1,16 +1,31 @@
 [
   {
-    "title": "Employment",
-    "linkedTopics": ["Social Security", "Social Justice"],
-    "dataList": []
-  },
-  {
     "title": "Women Empowerment",
     "linkedTopics": [],
     "dataList": [
       { "title": "Lakhpati Didi Programme", "description": "3 cr target" },
       { "title": "Drone Didi Programme", "description": "" },
-      { "title": "Mudra Yojana", "description": "Collateral free loans" }
+      { "title": "Mudra Yojana", "description": "Collateral free loans" },
+      {
+        "title": "Women in Labour Force",
+        "description": "Female Labour Force Participation Rate (LFPR) improved from [BOLD]49.8% (2017-18) [BOLD] to [BOLD]60.1% (2023-24)[BOLD]"
+      },
+      {
+        "title": "Women in Banking",
+        "description": "Have [BOLD]39.2% [BOLD] of total bank accounts and contribute to [BOLD]39.7%[BOLD] of aggregate deposits in [BOLD]2023-24[BOLD]"
+      },
+      {
+        "title": "Women holding DEMAT account",
+        "description": "Increased from [BOLD]6.67 million[BOLD] to [BOLD]27.71 million[BOLD], reflecting a [BOLD]4.2x[BOLD] growth in just [BOLD]3[BOLD] years"
+      },
+      {
+        "title": "Women voters",
+        "description": "Female voter turnout reached [BOLD]65.8%[BOLD] in [BOLD]2024[BOLD], while male turnout at [BOLD]65.5%[BOLD]"
+      },
+      {
+        "title": "Legal support",
+        "description": "POSH Act, 2013"
+      }
     ]
   },
   {
@@ -30,6 +45,25 @@
         "description": "To provide an avenue for scientifically inclined women researchers and scientists"
       }
     ]
+  },
+  {
+    "title": "Equal Pay for Equal Work",
+    "linkedTopics": [],
+    "dataList": [
+      {
+        "title": "Done By BCCI",
+        "description": "Equal salary of both Men and Women player."
+      },
+      {
+        "title": "A report by the Ministry of Statistics and Programme Implementation",
+        "description": "The average rural wage for men is [BOLD]Rs 393/day[BOLD] whereas a woman worker's wage is [BOLD]Rs 265/day[BOLD]. Similarly, the urban wage for men is [BOLD]Rs 483/day[BOLD] against [BOLD]Rs 333/day[BOLD] for women."
+      }
+    ]
+  },
+  {
+    "title": "Employment",
+    "linkedTopics": ["Social Security", "Social Justice"],
+    "dataList": []
   },
   {
     "title": "Farmer Empowerment",
@@ -59,20 +93,6 @@
     "title": "Migration",
     "linkedTopics": [],
     "dataList": []
-  },
-  {
-    "title": "Equal Pay for Equal Work",
-    "linkedTopics": [],
-    "dataList": [
-      {
-        "title": "Done By BCCI",
-        "description": "Equal salary of both Men and Women player."
-      },
-      {
-        "title": "A report by the Ministry of Statistics and Programme Implementation",
-        "description": "The average rural wage for men is [BOLD]Rs 393/day[BOLD] whereas a woman worker's wage is [BOLD]Rs 265/day[BOLD]. Similarly, the urban wage for men is [BOLD]Rs 483/day[BOLD] against [BOLD]Rs 333/day[BOLD] for women."
-      }
-    ]
   },
   {
     "title": "Good Governance",
