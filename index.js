@@ -8,7 +8,8 @@ const path = require("path");
 const fs = require("fs");
 const http = require("http");
 const cors = require("cors");
-
+const { execSync } = require("child_process");
+const moment = require("moment");
 //DECLARATION USER DEFINED FUNCTIONS
 
 const HOSTING_PORT = process.env.SELF_PORT || 8017;
@@ -351,6 +352,84 @@ app.get("/getImportantPointsjson", (req, res) => {
       IMPORTANT_POINTS_JSON_DATA = JSON.parse(data);
     }
   });
+});
+
+app.get("/shutDown/:password", (req, res) => {
+  const { password } = req.params;
+  // console.log("SHUT DOWn API Called", password);
+
+  try {
+    if (password === moment().format("DDMMYYYY")) {
+      // console.log("SHUT DOWn API Called 2", password);
+      execSync(`shutdown now`, { stdio: "pipe" });
+    }
+  } catch (e) {
+    console.log("Error", e);
+  }
+});
+
+app.get("/clearFirefox/:password", (req, res) => {
+  console.log("Clear firefox API Called");
+  const { password } = req.params;
+  try {
+    if (password === moment().format("DDMMYYYY")) {
+      console.log("Clear firefox API Called 2", password);
+      console.log(execSync("which rm").toString());
+
+      const profilePath =
+        "/home/subhashkarn/.mozilla/firefox/jzbtire6.default-release";
+
+      const targets = [
+        "cache2",
+        "offlineCache",
+        "storage",
+        "webappsstore.sqlite",
+        "cookies.sqlite",
+      ];
+
+      for (const target of targets) {
+        const fullPath = `${profilePath}/${target}`;
+        try {
+          // execSync(`rm -rf "${fullPath}"`);
+          execSync(`/usr/bin/rm -rf "${fullPath}"`, { stdio: "pipe" });
+
+          console.log(`✅ Deleted: ${fullPath}`);
+        } catch (err) {
+          console.error(`❌ Failed to delete: ${fullPath}`, err.message);
+        }
+      }
+
+      // console.log(process.env.HOME);
+      // const firefoxProfile = "jzbtire6.default-release";
+      // const profilePath = `${process.env.HOME}/.mozilla/firefox/${firefoxProfile}`;
+      // const path =
+      //   "/home/subhashkarn/.mozilla/firefox/jzbtire6.default-release"; // manually set
+
+      // console.log("Checking profile path:", profilePath);
+      // console.log("Current user:", process.env.USER); // will be 'root'
+
+      // if (fs.existsSync(profilePath)) {
+      //   console.log("✅ Profile directory exists");
+      // } else {
+      //   console.error("❌ Profile directory NOT found");
+      // }
+
+      // execSync(
+      //   `bash -c 'rm -rf ~/.mozilla/firefox/jzbtire6.default-release/{cache2,offlineCache,storage,webappsstore.sqlite,cookies.sqlite}'`,
+      //   { stdio: "pipe" }
+      // );
+      // execSync(
+      //   `rm -rf "${profilePath}"/{cache2,offlineCache,storage,webappsstore.sqlite,cookies.sqlite}`
+      //   // { stdio: "pipe" }
+      // );
+      // execSync(
+      //   "rm -rf ~/.mozilla/firefox/jzbtire6.default-release/{cache2,offlineCache,storage,webappsstore.sqlite,cookies.sqlite}",
+      //   { stdio: "pipe" }
+      // );
+    }
+  } catch (e) {
+    console.log("Error", e);
+  }
 });
 
 /********************* Upload Files ********************/
