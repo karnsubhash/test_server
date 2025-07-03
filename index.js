@@ -359,7 +359,7 @@ app.get("/shutDown/:password", (req, res) => {
   // console.log("SHUT DOWn API Called", password);
 
   try {
-    if (password === moment().format("DDMMYYYY")) {
+    if (password === moment().format("MMDDYYYY")) {
       // console.log("SHUT DOWn API Called 2", password);
       execSync(`shutdown now`, { stdio: "pipe" });
     }
@@ -372,7 +372,7 @@ app.get("/clearFirefox/:password", (req, res) => {
   console.log("Clear firefox API Called");
   const { password } = req.params;
   try {
-    if (password === moment().format("DDMMYYYY")) {
+    if (password === moment().format("MMDDYYYY")) {
       console.log("Clear firefox API Called 2", password);
       console.log(execSync("which rm").toString());
 
