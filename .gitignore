@@ -1,6 +1,6 @@
 # dependencies
 /node_modules
-/build
+# /build
 
 # misc
 package-lock.json

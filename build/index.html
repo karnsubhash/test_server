@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple File Upload</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+      .container {
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Upload a File</h2>
+
+      <!-- File upload form -->
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="myfile" required />
+        <br /><br />
+        <button type="submit">Upload</button>
+      </form>
+    </div>
+  </body>
+</html>

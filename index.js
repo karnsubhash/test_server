@@ -86,6 +86,7 @@ const allowedOrigins = [
   "http://" + SELF_IP + ":3017",
   "http://localhost:" + HOSTING_PORT,
   "http://localhost:3017",
+  "https://master-minnow-sharply.ngrok-free.app",
 ];
 //-----------------Create Storage---------------//
 const createGeographyImagesStorage = () => {
@@ -631,6 +632,31 @@ app.post("/uploadCurrentAffairsImagesToBackend", async (req, res) => {
   });
 });
 
+/*** UPLOAD FILE FROM INTERNET (START) */
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "uploads/"); // folder where files will be saved
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + "_" + file.originalname);
+  },
+});
+
+const upload = multer({ storage: storage });
+
+app.post("/upload", upload.single("myfile"), (req, res) => {
+  console.log("File received:", req.file);
+
+  if (!req.file) {
+    return res.status(400).send("No file uploaded!");
+  }
+
+  res.send("File uploaded successfully: " + req.file.filename);
+});
+
+/*** UPLOAD FILE FROM INTERNET (END) */
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
@@ -639,3 +665,6 @@ const HostServer = http.createServer(app);
 HostServer.listen(HOSTING_PORT, async () => {});
 
 module.exports = app;
+
+//  1272  ngrok http --url=master-minnow-sharply.ngrok-free.app 8017
+//  1273  ngrok http http://localhost:8017
