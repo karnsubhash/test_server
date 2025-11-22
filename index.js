@@ -633,16 +633,16 @@ app.post("/uploadCurrentAffairsImagesToBackend", async (req, res) => {
 });
 
 /*** UPLOAD FILE FROM INTERNET (START) */
+const desktopPath = `/home/subhashkarn/Desktop`;
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "uploads/"); // folder where files will be saved
+    cb(null, desktopPath); // save file on Desktop
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + "_" + file.originalname);
   },
 });
-
 const upload = multer({ storage: storage });
 
 app.post("/upload", upload.single("myfile"), (req, res) => {
